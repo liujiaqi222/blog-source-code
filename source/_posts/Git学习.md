@@ -1,22 +1,29 @@
-1. ## 1. Git基础
+---
+title: Git学习
+date: 2021-07-31 12:19:35
+tags: Git
+---
 
-   ### 1.1 版本管理
 
-   #### 1.1.1 什么是版本管理
+## 1. Git基础
 
-   版本管理是一种记录文件变化的方式，以便将来查阅特定版本的文件内容。
+### 1.1 版本管理
 
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151949.png)
+#### 1.1.1 什么是版本管理
 
-   #### 1.1.2 人为维护文档版本的问题
+版本管理是一种记录文件变化的方式，以便将来查阅特定版本的文件内容。
 
-   1. 文档数量多且命名不清晰导致文档版本混乱
+![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151949.png)
 
-   2. 每次编辑文档需要复制，不方便
+#### 1.1.2 人为维护文档版本的问题
 
-   3. 多人同时编辑同一个文档，容易产生覆盖
+1. 文档数量多且命名不清晰导致文档版本混乱
 
-   
+2. 每次编辑文档需要复制，不方便
+
+3. 多人同时编辑同一个文档，容易产生覆盖
+
+
 
 
    ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151953.png)
@@ -131,133 +138,13 @@
 
    使用场景：分支临时切换
 
-   - 存储临时改动：`git stash`
+   - 存储临时改动：`git stash` 
+
+     使用git add后将文件添加到暂存区后，还没有commit提交。此时使用git stash，将当前分支所有改动剪切到git的剪切板中，文件会回到之前的状态。如果使用git status，会发现显示的是noting to commit，因此便可以切换分支。
+
+     ![image-20210731224217165](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731224217.png)
+
    - 恢复改动：`git stash pop`
 
-   ## 3. Github
+     ![image-20210731224359238](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731224421.png)
 
-   在版本控制系统中，大约90%的操作都是在本地仓库中进行的：暂存，提交，查看状态或者历史记录等等。除此之外，如果仅仅只有你一个人在这个项目里工作，你永远没有机会需要设置一个远程仓库。
-
-   只有当你需要和你的开发团队共享数据时，设置一个远程仓库才有意义。你可以把它想象成一个 “文件管理服务器”，利用这个服务器可以与开发团队的其他成员进行数据交换。
-
-   ### 3.1 注册
-
-   1. 访问[github](https://github.com/)首页，点击 Sign up 连接。（注册）
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152148.png)
-
-   2. 填写用户名、邮箱地址、GitHub登陆密码
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152151.png)
-
-   3. 选择计划
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152210.png)
-
-   4. 填写 GitHub 问题
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152207.png)
-
-   5. 验证邮箱
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152215.png)
-
-   6. GitHub 个人中心
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152218.png)
-
-   
-
-   ### 3.2 多人协作开发流程
-
-   - A在自己的计算机中创建本地仓库
-   - A在github中创建远程仓库
-   - A将本地仓库推送到远程仓库
-   - B克隆远程仓库到本地进行开发
-   - B将本地仓库中开发的内容推送到远程仓
-   - A将远程仓库中的最新内容拉去到本地
-
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152220.png)
-
-   
-
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731153058.png)
-
-   ### 3.3 创建仓库
-
-   1. 填写仓库基本信息
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152223.png)
-
-   2. 将本地仓库推送到远程仓库
-
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152225.png)
-
-      1. git push 远程仓库地址 分支名称
-
-      2. git push 远程仓库地址别名 分支名称
-
-      3. git push -u 远程仓库地址别名 分支名称
-
-         -u 记住推送地址及分支，下次推送只需要输入git push即可
-
-      4. git remote add 远程仓库地址别名 远程仓库地址
-
-   ### 3.4 拉取操作
-
-   #### 3.4.1 克隆仓库
-
-   克隆远端数据仓库到本地：`git clone 仓库地址`
-
-   #### 3.4.2 拉取远程仓库中最新的版本
-
-   拉取远程仓库中最新的版本：`git pull 远程仓库地址 分支名称`
-
-   ### 3.5 解决冲突
-
-   在多人同时开发一个项目时，如果两个人修改了同一个文件的同一个地方，就会发生冲突。冲突需要人为解决。
-
-   ### 3.6 跨团队协作
-
-   1. 程序员 C fork仓库
-   2. 程序员 C 将仓库克隆在本地进行修改
-   3. 程序员 C 将仓库推送到远程
-   4. 程序员 C 发起pull reqest
-   5. 原仓库作者审核
-   6. 原仓库作者合并代码
-
-   ### 3.7 ssh免登陆
-
-   https协议仓库地址：https://github.com/itcast-frontEnd/git-demo.git
-
-   
-
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152231.png)
-
-   生成秘钥：`ssh-keygen`
-
-   秘钥存储目录：C:\Users\用户\\.ssh
-
-   公钥名称：id_rsa.pub
-
-   私钥名称：id_rsa
-
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152237.png)
-
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152240.png)
-
-   ### 3.8 GIT忽略清单
-
-   将不需要被git管理的文件名字添加到此文件中，在执行git命令的时候，git就会忽略这些文件。
-
-   git忽略清单文件名称：**.gitignore**
-
-   将工作目录中的文件全部添加到暂存区：`git add .`
-
-   
-
-   
-
-   
-
-   
