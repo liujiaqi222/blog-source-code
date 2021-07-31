@@ -119,13 +119,9 @@
    #### 2.1.2 分支命令
 
    - `git branch` 查看分支
-
    - `git branch 分支名称` 创建分支
-
-   - `git checkout 分支名称` 切换分支
-
-   - `git merge 来源分支` 合并分支
-
+   - `git checkout 分支名称` 切换分支 (切换分支之前需要提交)
+   - `git merge 来源分支` 合并分支（如果存在两个分支，dev和master，如果想要将dev分支的内容合并到master分支上，此时首先要回到master分支，然后再使用命令 git merge dev，而且dev分支依旧存在）
    - `git branch -d 分支名称` 删除分支（分支被合并后才允许删除）（-D 强制删除）
 
 
