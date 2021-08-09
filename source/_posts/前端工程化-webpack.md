@@ -391,3 +391,343 @@ $(function(){
 
 要查看 webpack 做了什么，请打开控制台检查页面（不要查看页面源代码，它不会显示结果，因为 `<style>` 标签是由 JavaScript 动态创建的），并查看页面的 head 标签。它应该包含 style 块元素，也就是我们在 `index.js` 中 import 的 css 文件中的样式。
 
+## 4.打包处理less文件
+
+① 运行 `npm i less-loader less -D` 命令
+② 在 `webpack.config.js` 的 module/rules 数组中，添加 loader 规则如下：  
+
+```js
+module.exports = {
+    module: {
+        rules: [
+            {
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
+            }
+        ]
+    }
+}
+```
+
+
+
+less是less-loader的内置依懒项，全部代码：
+
+```js
+const path = require('path');
+
+// 1.导入HTML插件，得到一个构造函数
+const HtmlPlugin = require('html-webpack-plugin');
+
+// 2.创建插件的实例对象
+const htmlPlugin = new HtmlPlugin({
+    template: './src/index.html', //指定要复制的文件路径（原文件的存放路径）,
+    filename: './index.html'  //生成的文件存放路径
+
+})
+
+module.exports = {
+    mode: 'development',
+    // 指定打包的入口文件
+    entry: path.join(__dirname, './src/index.js'),
+    output: {
+        // 输出目录
+        path: path.join(__dirname, './dist'),
+        // 输出文件的名称
+        filename: 'bundle.js'
+    },
+    // 3.通过plugins节点，使htmlPlugin插件生效
+    plugins: [htmlPlugin],
+    devServer: {
+        open: true,
+        host: '127.0.0.1',
+        port: 80
+    },
+    // 所有第三方模块的匹配规则
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader','css-loader']
+            },
+            {
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
+            }
+        ]
+    }
+}
+```
+
+## 5. 打包图片
+
+v5已经弃用了`file-loader`和`url-loader`，因此需要使用webpack自带的`asset modules`。
+
+```js
+//webpack.config.js
+
+const path = require('path');
+
+ module.exports = {
+   entry: './src/index.js',
+   output: {
+     filename: 'bundle.js',
+     path: path.resolve(__dirname, 'dist'),
+   },
+   module: {
+     rules: [
+       {
+         test: /\.css$/i,
+         use: ['style-loader', 'css-loader'],
+       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+     ],
+   },
+ };
+```
+
+如何实现的：
+
+js：在 `import MyImage from './my-image.png'` 时，此图像将被处理并添加到 `output` 目录，*并且* `MyImage` 变量将包含该图像在处理后的最终 url。
+
+css：在使用 [css-loader](https://webpack.docschina.org/loaders/css-loader) 时，如前所示，会使用类似过程处理你的 CSS 中的 `url('./my-image.png')`。loader 会识别这是一个本地文件，并将 `'./my-image.png'` 路径，替换为 `output` 目录中图像的最终路径。
+
+html：而 [html-loader](https://webpack.docschina.org/loaders/html-loader) 以相同的方式处理 `<img src="./my-image.png" />`。
+
+## 6. loader的另外一种配置方式
+
+带参数项的 loader 还可以通过对象的方式进行配置：  
+
+```js
+{
+    test:/\.jpg|png|gif$/,
+    use:{
+        loader:'url-loader',
+        options:{
+            limit:222222
+        }
+    }
+}
+```
+
+## 7.使用babel处理 js 文件中的高级语法
+
+webpack 只能打包处理一部分高级的 JavaScript 语法。对于那些 webpack 无法处理的高级 js 语法，需要借助于 babel-loader 进行打包处理。
+
+### 7.1 安装 babel-loader 相关的包
+
+运行如下的命令安装对应的依赖包：
+
+```bash
+npm install babel-loader@8.2.1 @babel/core@7.12.3 @babel/plugin-proposal-class-properties@7.12.1 -D
+```
+
+### 7.2 配置 babel-loader
+
+在 webpack.config.js 的 module -> rules 数组中，添加 loader 规则如下：  
+
+```js
+module.exports = {
+    mode: 'development',
+    // 所有第三方模块的匹配规则
+    module: {
+            {
+                test:/\.js$/,
+                // exclude 为排除项
+                // 表示babel-loade无需处理node_modules下的js文件
+                exclude:/node_modules/,
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        // 声明一个babel插件，用于转换class中的高级语法
+                        plugins:['@babel/plugin-proposal-class-properties']
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
+# 管理输出
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 打包发布
+
+## 1.为什么要打包发布
+
+项目开发完成之后，使用 webpack 对项目进行打包发布的主要原因有以下两点：
+
+① 开发环境下，打包生成的文件存放于内存中，无法获取到最终打包生成的文件
+
+② 开发环境下，打包生成的文件不会进行代码压缩和性能优化为了让项目能够在生产环境中高性能的运行，因此需要对项目进行打包发布。  
+
+## 2. 配置 webpack 的打包发布
+
+ 在 package.json 文件的 scripts 节点下，新增 build 命令如下：
+
+```json
+{
+    "scripts":{
+        "dev":"webpack serve", // 开发环境中，运行dev命令
+        "build":"webpack --mode production" // 项目发布时运行build命令
+    }
+}
+```
+
+`--model` 是一个参数项，用来指定 webpack 的运行模式。production 代表生产环境，会对打包生成的文件进行代码压缩和性能优化。
+注意：通过 --model 指定的参数项，会**覆盖** webpack.config.js 中的 model 选项。 
+
+### 3. 把 JavaScript 文件统一生成到 js 目录中
+
+在 webpack.config.js 配置文件的 output 节点中，进行如下的配置：  
+
+```js
+const path = require('path');
+
+// 1.导入HTML插件，得到一个构造函数
+const HtmlPlugin = require('html-webpack-plugin');
+
+// 2.创建插件的实例对象
+const htmlPlugin = new HtmlPlugin({
+    template: './src/index.html', //指定要复制的文件路径（原文件的存放路径）,
+    filename: './index.html'  //生成的文件存放路径
+
+})
+
+module.exports = {
+    mode: 'development',
+    // 指定打包的入口文件
+    entry: path.join(__dirname, './src/index.js'),
+    output: {
+        // 输出目录
+        path: path.join(__dirname, './dist'),
+        // 明确告诉webpack把生成的bundle.js文件存放到dist目录下的js文件夹下
+        filename: 'js/bundle.js'
+    },
+}
+```
+
+## 4.把图片文件统一生成到 image 目录中
+
+修改 webpack.config.js 中的 url-loader 配置项，新增 `outputPath` 选项即可指定图片文件的输出路径：  
+
+```js
+module.exports = {
+    mode: 'development',
+    // 所有第三方模块的匹配规则
+    module: {
+        rules: [
+            {
+                test:/\.jpg|png|gif$/,
+                use:{
+                    loader:'url-loader',
+                    options:{
+                        limit:2222,
+                        //明确指出生成的文件存储到dist目录下的image文件夹中
+                        outputPath:'image'
+                    }
+				}
+            }
+        ]
+    }
+}
+```
+
+# Source Map
+
+## 1.生产环境中遇到的问题
+
+前端项目在投入生产环境之前，都需要对 JavaScript 源代码进行压缩混淆，从而减小文件的体积，提高文件的加载效率。此时就不可避免的产生了另一个问题：对压缩混淆之后的代码除错（debug）是一件极其困难的事情  
+
+![image-20210805125849106](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051258183.png)
+
+- 变量被替换成没有任何语义的名称
+-  空行和注释被剔除  
+
+## 2. 什么是 Source Map  
+
+**Source Map 就是一个信息文件，里面储存着位置信息。也就是说，Source Map 文件中存储着代码压缩混淆前后的对应关系。**
+
+有了它，出错的时候，除错工具将直接显示原始代码，而不是转换后的代码，能够极大的方便后期的调试  
+
+## 3. webpack 开发环境下的 Source Map
+
+在开发环境下，webpack 默认启用了 Source Map 功能。当程序运行出错时，可以直接在控制台提示错误行的位置，并定位到具体的源代码：  
+
+### 3.1 默认 Source Map 的问题  
+
+开发环境下**默认生成的 Source Map记录的是生成后的代码**的位置。会导致运行时报错的行数与源代码的行数不一致的问题。示意图如下：  
+
+### 3.2 解决默认 Source Map 的问题
+
+开发环境下，推荐在 webpack.config.js 中添加如下的配置，即可保证运行时报错的行数与源代码的行数保持一致：  
+
+```js
+module.exports={
+    mode:'development',
+    //eval-source-map 仅限在开发模式下使用，不建议在生产模式下使用
+    //使用此配置生成的source map即可保证运行时报错的行数与源代码的行数保持一致：  
+    devtool: 'eval-source-map'
+}
+```
+
+## 4. webpack 生产环境下的 Source Map
+
+在生产环境下，如果省略了 devtool 选项，则最终生成的文件中不包含 Source Map。这能够防止原始代码通过 Source Map 的形式暴露给别有所图之人。  
+
+### 4.1只定位行数不暴露源码  
+
+在生产环境下，如果只想定位报错的具体行数，且不想暴露源码。此时可以将 devtool 的值设置为`nosources-source-map`。实际效果如图所示：  
+
+![image-20210805131426332](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051314367.png)
+
+### 4.2 定位行数且暴露源码
+
+在生产环境下，如果想在定位报错行数的同时，展示具体报错的源码。此时可以将 devtool 的值设置为source-map。
+
+![image-20210805131530831](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051315878.png)
+
+## 5.Source Map 的最佳实践  
+
+① 开发环境下：
+
+- 建议把 devtool 的值设置为 eval-source-map
+
+- 好处：可以精准定位到具体的错误行
+
+② 生产环境下：
+
+- 建议关闭 Source Map 或将 devtool 的值设置为 nosources-source-map
+
+- 好处：防止源码泄露，提高网站的安全性  

@@ -445,6 +445,47 @@ new Vue({
 
 > v-else 、v-else-if 必须跟在 v-if 或者 v-else-if之后。
 
+## 条件渲染指令
+
+条件渲染指令用来辅助开发者按需控制 DOM 的显示与隐藏。条件渲染指令有如下两个，分别是：
+
+- v-if
+-  v-show  
+
+```html
+<div id="app">
+    <button @click='flag=!flag'>Toggle Flag</button>
+    <p v-if='flag'>显示：v-if</p>
+    <p v-show='flag'>显示：v-show</p>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            // 用来控制元素的隐藏和显示
+            flag:true
+        },
+    })
+</script>
+```
+
+v-if 和 v-show 的区别
+
+1.实现原理不同：
+
+ v-if 指令会动态地创建或移除 DOM 元素，从而控制元素在页面上的显示与隐藏；
+
+ v-show 指令会动态为元素添加或移除 style="display: none;" 样式，从而控制元素的显示与隐藏；
+
+2.性能消耗不同：
+
+v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。
+
+- 如果需要非常频繁地切换，则使用 v-show 较好
+
+- 如果在运行时条件很少改变，则使用 v-if 较好  
+
 ## 循环语句
 
 循环使用 v-for 指令。v-for 指令需要以 **site in sites** 形式的特殊语法， sites 是源数据数组并且 site 是数组元素迭代的别名。
@@ -527,6 +568,32 @@ new Vue({
   </ul>
 </div>
 ```
+
+## 使用 key 维护列表的状态
+
+当**列表的数据变化**时，默认情况下，vue **会尽可能的复用**已存在的 DOM 元素，从而提升渲染的性能。但这种默认的性能优化策略，会导致有状态的列表无法被正确更新。
+为了给 vue 一个提示，以便它能跟踪每个节点的身份，从而在保**证有状态的列表被正确更新**的前提下，**提升渲染的性能**。此时，需要为每项提供一个唯一的 key 属性：  
+
+```html
+<li v-for="(user,index) in userlist" :key='user.id'>
+    <input type="checkbox">
+    姓名：{{user.name}}
+</li>
+```
+
+使用key的注意事项：
+
+① key 的值只能是字符串或数字类型
+
+② key 的值必须具有唯一性（即：key 的值不能重复）
+
+③ 建议把数据项 id 属性的值作为 key 的值（因为 id 属性的值具有唯一性）
+
+④ **使用 index 的值当作 key 的值没有任何意义**（因为 index 的值不具有唯一性）
+
+⑤ 建议使用 v-for 指令时一定要指定 key 的值（既提升性能、又防止列表状态紊乱）  
+
+
 
 # Vue.js 计算属性
 
@@ -911,6 +978,60 @@ new Vue({
 })
 </script>
 ```
+
+## 事件对象
+
+在原生的 DOM 事件绑定中，可以在事件处理函数的形参处，接收事件对象 event。同理，在 `v-on` 指令（简写为 @ ）所绑定的事件处理函数中，同样可以接收到事件对象 event，示例代码如下：  
+
+```html
+<div id="app">
+    <h3>count的值为{{count}}</h3>
+    <button v-on:click='addCount'>++</button>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            count:0,
+        },
+        methods: {
+            addCount(e){
+                this.count++;
+                e.target.style.backgroundColor='blue';
+            }
+        },
+    })
+</script>
+```
+
+## 绑定事件并传参
+
+在使用 v-on 指令绑定事件时，可以使用 ( ) 进行传参。**$event 是 vue 提供的特殊变量，用来表示原生的事件参数对象 event。$event 可以解决事件参数对象 event被覆盖的问题。**示例用法如下：  
+
+```html
+<div id="app">
+    <h3>count的值为{{count}}</h3>
+    <button v-on:click='addCount(2,$event)'>+2</button>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            count: 0,
+        },
+        methods: {
+            addCount(step,e) {
+                this.count+=step;
+                e.target.style.backgroundColor = 'blue';
+            }
+        },
+    })
+</script>
+```
+
+
 
 ## 事件修饰符
 
@@ -1745,6 +1866,4 @@ vm.$set(vm.list,1,'banana');// 数据和视图都发生了变化
   vm.$set(vm.info, 'gender', 'non-binary') // 而且此时再用vm.info.gender来修改也是响应式的
 </script>
 ```
-
-
 
