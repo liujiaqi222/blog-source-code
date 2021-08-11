@@ -1,6 +1,6 @@
 ---
-title: Vue小案例|TodoList和购物车
-date: 2021-08-08 21:19:08
+title: Vue小案例|TodoList_购物车_table案例
+date: 2021-08-10 09:19:08
 tags: [Vue, 小案例]
 
 ---
@@ -1994,5 +1994,847 @@ onGoodsCountChange(value){
     }
   })
 }
+```
+
+# table案例
+
+## 0. 实现步骤
+
+① 搭建项目的基本结构
+
+② 请求商品列表的数据
+
+③ 封装 MyTable 组件
+
+④ 实现删除功能
+
+⑤ 实现添加标签的功能  
+
+## 1. 搭建项目基本结构
+
+### 1.1 初始化项目
+
+1.在终端运行如下的命令，初始化 vite 项目：
+
+```bash
+npm init vite-app table-demo
+```
+
+2.cd 到项目根目录，安装依赖项：
+
+```bash
+npm install
+```
+
+3.安装 less 依赖包：
+
+```bash
+npm i less -D
+```
+
+4.使用 vscode 打开项目，并在 vscode 集成的终端下运行如下的命令，把项目运行起来：
+
+```bash
+npm run dev
+```
+
+### 1.2 梳理项目结构
+
+1.重置 App.vue 根组件的代码结构：
+
+```vue
+<template>
+  <div>
+    <h1>App 根组件</h1>
+  </div>
+</template>
+
+<script>
+export default {
+  name:'MyApp'
+}
+</script>
+
+<style lang='less' scoped>
+
+</style>
+```
+
+2.删除 components 目录下的 HelloWorld.vue 组件
+
+3.重置 index.css 中的样式：
+
+```css
+:root{
+  font-size: 12px;
+}
+body{
+  padding: 8px;
+}
+```
+
+4.把资料目录下的 css 文件夹复制、粘贴到 assets 目录中，并在 main.js 入口文件中入  bootstrap.css ：  
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import './assets/css/bootstrap.css'
+import './index.css'
+
+createApp(App).mount('#app')
+```
+
+## 2. 请求商品列表的数据
+
+1.运行如下的命令，安装 Ajax 的请求库：
+
+```bash
+npm install axios
+```
+
+2.在 main.js 入口模块中，导入并全局配置 axios：
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+
+// 1.导入axios
+import axios from 'axios'
+
+const app=createApp(App);
+
+// 2.将axios挂载到全局，之后，每个组件都可以通过this.$http代替axios发送请求
+app.config.globalProperties.$http=axios;
+
+// 3.设置请求的base url
+axios.defaults.baseURL='https://www.escook.cn'
+
+app.mount('#app');
+```
+
+3.在 App.vue 组件的 data 中声明 goodslist 商品列表数据：
+
+```js
+data(){
+  return{
+    // 商品列表数据
+    goodslist:[],
+  }
+}
+```
+
+4.在 App.vue 组件的 methods 中声明 getGoodsList 方法，用来从服务器请求商品列表的数据：  
+
+```js
+methods: {
+  // 初始化商品列表数据
+  async getGoodsList(){
+    const res= await this.$http('/api/goods');
+    // 请求失败 
+    if(res.status!==200) console.log('获取商品列表失败');
+    // 请求成功
+    this.goodslist=res.data.data;
+  }
+},
+```
+
+5.在 App.vue 组件中，声明 created 生命周期函数，并调用 getGoodsList 方法：
+
+```js
+created(){
+  this.getGoodsList();
+}
+```
+
+## 3. 封装 MyTable 组件
+
+### 3.0 MyTable 组件的封装要求
+
+1.用户通过名为 data 的 prop 属性，为 MyTable.vue 组件指定数据源
+
+2.在 MyTable.vue 组件中，预留名称为 header 的具名插槽
+
+3.在 MyTable.vue 组件中，预留名称为 body 的作用域插槽  
+
+### 3.1 创建并使用 MyTable 组件
+
+1.在 components/my-table 目录下新建 MyTable.vue 组件：
+
+```vue
+<template>
+  <div>Table组件</div>
+</template>
+
+<script>
+export default {
+    name:'MyTable',
+}
+</script>
+
+<style lang='less' scoped>
+
+</style>
+```
+
+2.在 App.vue 组件中导入并注册 MyTable.vue 组件：
+
+3.在 App.vue 组件的 DOM 结构中使用 MyTable.vue 组件：
+
+```vue
+<template>
+  <div>
+    <h1>App 根组件</h1>
+    <my-table></my-table>
+  </div>
+</template>
+
+<script>
+import MyTable from './components/my-table/MyTable.vue'
+export default {
+  name: "MyApp",
+  components:{
+    MyTable,
+  },
+};
+</script>
+
+```
+
+### 3.2 为表格声明 data 数据源
+
+1.在 MyTable.vue 组件的 props 节点中声明表格的 data 数据源：
+
+```vue
+<script>
+export default {
+    name:'MyTable',
+    props:{
+        // 表格数据源
+        data:{
+            type:Array,
+            required:true,
+            default:[]
+        }
+    }
+}
+</script>
+```
+
+2.在 App.vue 组件中使用 MyTable.vue 组件时，通过属性绑定的形式为表格指定 data 数据源:
+
+```vue
+<template>
+  <div>
+    <h1>App 根组件</h1>
+    <my-table :data='goodslist'></my-table>
+  </div>
+</template>
+```
+
+### 3.3 封装 MyTable 组件的模板结构
+
+1.基于 bootstrap 提供的Tables( https://v4.bootcss.com/docs/content/tables/)，在MyTable.vue 组件中渲染最基本的模板结构：  
+
+```vue
+<template>
+  <table class="table table-bordered table-striped">
+    <!-- 表格的标题区域 -->
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>商品名称</th>
+        <th>价格</th>
+        <th>标签</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <!-- 表格的主体区域 -->
+    <tbody></tbody>
+  </table>
+</template>
+```
+
+2.为了提高组件的复用性，最好把表格的 标题区域 预留为 <slot> 具名插槽，方便使用者自定义表格的标题：  
+
+```vue
+<template>
+  <table class="table table-bordered table-striped">
+    <!-- 表格的标题区域 -->
+    <thead>
+      <tr>
+        <!-- 命名插槽 -->
+        <slot name="header"></slot>
+      </tr>
+    </thead>
+    <!-- 表格的主体区域 -->
+    <tbody></tbody>
+  </table>
+</template>
+```
+
+3.在 App.vue 组件中，通过具名插槽的形式，为 MyTable.vue 组件指定标题名称：
+
+```vue
+<template>
+  <div>
+    <h1>App 根组件</h1>
+
+    <my-table :data='goodslist'>
+      <!-- 具名插槽 -->
+      <template v-slot:header>
+          <th>#</th>
+          <th>商品名称</th>
+          <th>价格</th>
+          <th>标签</th>
+          <th>操作</th>
+      </template>
+    </my-table>
+  </div>
+</template>
+```
+
+### 3.4 预留名称为 body 的作用域插槽
+
+1.在 MyTable.vue 组件中，通过 v-for 指令循环渲染表格的数据行：
+
+```vue
+<template>
+  <table class="table table-bordered table-striped">
+    <!-- 表格的标题区域 -->
+    <thead>
+      <tr>
+        <!-- 命名插槽 -->
+        <slot name="header"></slot>
+      </tr>
+    </thead>
+    <!-- 表格的主体区域 -->
+    <tbody>
+        <tr v-for='(item,index) in data' :key='item.id'></tr>
+    </tbody>
+  </table>
+</template>
+```
+
+2.为了提高 MyTable.vue 组件的复用性，最好把表格数据行里面的 td 单元格预留为`<slot>` 具名插槽。示例代码如下：  
+
+```vue
+<tr v-for='(item,index) in data' :key='item.id'>
+    <!-- 为数据行预留的插槽 -->
+    <slot name="body"></slot>
+</tr>
+```
+
+3.为了让组件的使用者在提供 body 插槽的内容时，能够自定义内容的渲染方式，需要把body 具名插槽升级为 **作用域插槽** ：  
+
+```vue
+<tr v-for="(item, index) in data" :key="item.id">
+<!-- 为数据行预留的作用域插槽 -->
+    <slot name="body" :row="item" :index="index"></slot>
+</tr>
+```
+
+4.在 App.vue 组件中，基于作用域插槽的方式渲染表格的数据：
+
+```vue
+<template>
+  <div>
+    <h1>App 根组件</h1>
+    <my-table :data="goodslist">
+      <!-- 具名插槽 -->
+      <template v-slot:header>
+        <th>#</th>
+        <th>商品名称</th>
+        <th>价格</th>
+        <th>标签</th>
+        <th>操作</th>
+      </template>
+      <template #body="{ row, index }">
+        <td>{{ index + 1 }}</td>
+        <td>{{ row.goods_name }}</td>
+        <td>￥{{ row.goods_price }}</td>
+        <td>{{ row.tags }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm">删除</button>
+        </td>
+      </template>
+    </my-table>
+  </div>
+</template>
+```
+
+## 4. 实现删除功能
+
+1.为删除按钮绑定 click 事件处理函数：
+
+```vue
+<button class="btn btn-danger btn-sm" @click='onRemove(row.id)'>删除</button>
+```
+
+2.在 App.vue 组件的 methods 中声明事件处理函数如下：
+
+```js
+onRemove(id){
+  this.goodslist.some((item,index)=>{
+    if(item.id===id){
+      this.goodslist.splice(index,1);
+      return true;
+    }
+  })
+}
+```
+
+### 5. 实现添加标签的功能
+
+### 5.1 自定义渲染标签列
+
+根据 bootstrap 提供的 Badge ( https://v4.bootcss.com/docs/components/badge/#contextual-variations )效果，循环渲染商品的标签信息如下：  
+
+```vue
+<!-- 循环渲染标签 -->
+<td>
+  <span class="badge badge-warning ml-2" v-for='item in row.tags' :key='item'>{{item}} </span>
+</td>
+```
+
+### 5.2 实现 input 和 button 的按需展示
+
+1.使用 v-if 结合 v-else 指令，控制 input 和 button 的按需展示：
+
+```vue
+<td>
+  <input type="text" class="form-control form-control-sm form-ipt" v-if="row.inputVisible">
+  <button type="button" class="btn btn-primary btn-sm" v-else>+Tag</button>
+  <span
+    class="badge badge-warning ml-2"
+    v-for="item in row.tags"
+    :key="item">
+    {{ item }}
+  </span>
+</td>
+```
+
+2.点击按钮，控制 input 和 button 的切换：
+
+```vue
+<input type="text" class="form-control form-control-sm form-ipt" v-if="row.inputVisible">
+<button type="button" class="btn btn-primary btn-sm" v-else @click='row.inputVisible=true'>+Tag</button>
+```
+
+### 5.3 让 input 自动获取焦点
+
+1.在 App.vue 组件中，通过 directives 节点自定义 v-focus 指令如下：
+
+```vue
+directives:{
+  focus(el){
+    el.focus();
+  }
+}
+```
+
+2.为 input 输入框应用 v-focus 指令：
+
+```vue
+<input type="text" class="form-control form-control-sm form-ipt" v-if="row.inputVisible" v-focus>
+```
+
+### 5.4 文本框失去焦点自动隐藏
+
+1.使用 v-model 指令把 input 输入框的值双向绑定到 row.inputValue 中：
+
+```vue
+<input type="text" class="form-control form-control-sm form-ipt" v-if="row.inputVisible" v-focus v-model='row.inputValue'>
+```
+
+2.监听文本框的 blur 事件，在触发其事件处理函数时，把 当前行的数据 传递进去：
+
+```vue
+<input
+  type="text"
+  class="form-control form-control-sm form-ipt"
+  v-if="row.inputVisible"
+  v-focus
+  v-model.trim="row.inputValue"
+  @blur="onInputConfirm(row)"
+/>
+```
+
+3.在 App.vue 组件的 methods 节点下声明 onInputConfirm 事件处理函数：
+
+```js
+onInputConfirm(row) {
+  const val = row.inputValue;
+  row.inputValue = "";
+  row.inputVisible = false;
+},
+```
+
+### 5.5 为商品添加新的 tag 标签
+
+进一步修改 onInputConfirm 事件处理函数如下：
+
+```js
+onInputConfirm(row) {
+  const val = row.inputValue;
+  row.inputValue = "";
+  row.inputVisible = false;
+  // 1.1 判断val的值是否为空，如果为空，则并添加
+  // 1.2 判断val的值是否存在于数组中，如果存在则不添加 
+  if(!val||row.tags.indexOf(val)!==-1) return;
+  // 2将标签添加到tag数组中
+  row.tags.push(val);
+
+},
+```
+
+### 5.6 响应文本框的回车按键
+
+当用户在文本框中敲击了 回车键 的时候，也希望能够把当前输入的内容添加为 tag 标签。此时，可以为文本框绑定 keyup 事件如下：  
+
+```vue
+<input
+  type="text"
+  class="form-control form-control-sm form-ipt"
+  v-if="row.inputVisible"
+  v-focus
+  v-model.trim="row.inputValue"
+  @blur="onInputConfirm(row)"
+  @keyup.enter="onInputConfirm(row)"
+/>
+```
+
+### 5.7 响应文本框的 esc 按键
+
+当用户在文本框中敲击了 esc 按键的时候，希望能够快速清空文本框的内容。此时，可以为文本框绑定 keyup 事件如下  
+
+```vue
+<input
+  type="text"
+  class="form-control form-control-sm form-ipt"
+  v-if="row.inputVisible"
+  v-focus
+  v-model.trim="row.inputValue"
+  @blur="onInputConfirm(row)"
+  @keyup.enter="onInputConfirm(row)"
+  @keyup.esc="row.inputValue=''"
+/>
+```
+
+# 用户管理小案例
+
+## 0. 实现步骤
+
+1. 安装并配置 vue-router 4.x
+
+2. 展示 Login.vue 登录组件
+
+3. 模拟并实现登录功能
+
+4. 通过路由渲染 Home.vue
+
+5. 实现退出登录的功能
+
+6. 全局控制路由的访问权限
+
+7. 将左侧菜单改造为路由链接
+
+8. 渲染用户管理页面的数据
+
+9. 实现跳转到用户详情页的功能
+
+10. 开启路由的 props 传参
+
+11. 通过编程式导航实现后退功能  
+
+## 1. 安装并配置 vue-router 4.x
+
+1.运行如下的命令，安装 vue-router ：
+
+```bash
+npm install vue-router@next 
+```
+
+2.在 src 目录下新建 router.js 路由模块：
+
+```js
+import {createRouter,createWebHashHistory} from 'vue-router'
+
+// 创建路由规则
+const router = createRouter({
+    history:createWebHashHistory(),
+    routes:[],
+})
+
+// 向外导出router模块
+export default router;
+```
+
+3.在 main.js 入口文件中导入并挂载路由对象：
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+
+//导入router模块
+import router from './router.js';
+
+// 创建 app 实例
+const app = createApp(App);
+
+// 全局挂载router
+app.use(router);
+
+// 挂载 app 实例
+app.mount('#app')
+
+```
+
+## 2.展示 Login.vue 登录组件
+
+1.在 router.js 模块中导入 Login.vue 组件：
+
+```js
+// 导入组件
+import Login from './components/MyLogin.vue'
+```
+
+2.声明路由规则如下：
+
+```js
+const router = createRouter({
+    history:createWebHashHistory(),
+    routes:[
+        // 路由重定向
+        {path:'/',redirect:'/login'},
+        {path:'/login',component:Login,name:'login'}
+    ],
+})
+```
+
+3.在 `App.vue` 组件中声明路由占位符：
+
+```vue
+<template>
+  <div>
+    <!-- 路由占位符 -->
+    <router-view></router-view>
+  </div>
+</template>
+```
+
+## 3.模拟并实现登录功能
+
+1.在 MyLogin.vue 组件中声明如下的 data 数据：
+
+```js
+export default {
+  name: 'MyLogin',
+  data(){
+    return {
+      username:'',
+      password:''
+    }
+  }
+}
+```
+
+2.为用户名和密码的文本框进行 **v-model 双向数据**绑定：
+
+```vue
+<!-- 登录名称 -->
+<div class="form-group form-inline">
+  <label for="username">登录名称</label>
+  <input type="text" class="form-control ml-2" id="username" placeholder="请输入登录名称" autocomplete="off" v-model="username">
+</div>
+<!-- 登录密码 -->
+<div class="form-group form-inline">
+  <label for="password">登录密码</label>
+  <input type="password" class="form-control ml-2" id="password" placeholder="请输入登录密码" v-model="password">
+</div>
+```
+
+3.为 登录按钮 绑定点击事件处理函数：
+
+```vue
+<button type="button" class="btn btn-primary" @click='onLoginClick'>登录</button>
+```
+
+4.在 methods 中声明 onLoginClick 事件处理函数如下：
+
+```js
+onLoginClick(){
+  // 判断用户名和密码是否正确
+ if(this.username==='admin'&&this.password==='123456'){
+    // 登录成功 跳转到后台主页
+    this.$router.push('/home');
+    // 模拟存储token
+    return localStorage.setItem('token','Bearer xxx');
+  }else{
+    // 登录失败 清除token
+    localStorage.removeItem('token');
+
+  }
+}
+```
+
+## 4. 通过路由渲染 Home.vue
+
+1.在 router.js 中导入 Home.vue 组件：
+
+```js
+import Home from './components/MyHome.vue';
+```
+
+2.在 routes 路由规则的数组中，声明对应的路由规则：
+
+```js
+const router = createRouter({
+    history:createWebHashHistory(),
+    routes:[
+        // 路由重定向
+        {path:'/',redirect:'/login'},
+        {path:'/login',component:Login,name:'login'},
+        {path:'/home',component:Home}
+    ],
+})
+```
+
+3.渲染 Home.vue 组件的基本结构：
+
+```vue
+<template>
+  <div class="home-container">
+    <!-- 头部组件 -->
+    <my-header></my-header>
+    <!-- 主体区域 -->
+    <div class="home-main-box">
+      <!-- 左侧边栏区域 -->
+      <my-aside></my-aside>
+      <!-- 右侧内容主体区域 -->
+      <div class="home-main-body"></div>
+    </div>
+  </div>
+</template>
+```
+
+## 5.实现退出登录的功能
+
+1.在 MyHeader.vue 组件中，为 退出登录 按钮绑定 click 事件处理函数：
+
+```vue
+<button type="button" class="btn btn-light" @click="onLogout">退出登录</button>
+```
+
+2.在 methods 中声明如下的事件处理函数：
+
+```js
+methods: {
+  onLogout(){
+      //跳转到登录页
+    this.$router.push('/login');
+      // 清空token
+    localStorage.removeItem('token');
+  }
+},
+```
+
+## 6.全局控制路由的访问权限
+
+在 router.js 模块中，通过 router 路由实例对象，全局挂载路由导航守卫：  
+
+```js
+// 导航守卫
+router.beforeEach((to,from,next)=>{
+    // 如果用户访问的是登录页面 直接放行
+    if(to.path==='/login') return next();
+    // 获取token值
+    const token=localStorage.getItem('token');
+    // 如果token 不存在 则跳转到登录页面
+    if(!token) return next('/login');
+    // 存在token 则直接放行
+    next();
+})
+```
+
+## 7. 将左侧菜单改造为路由链接
+
+1.打开 `MyAside.vue` 组件，把 li 内部的纯文本升级改造为 `<router-link>` 组件：
+
+```vue
+<ul class="user-select-none menu">
+  <li class="menu-item">
+    <router-link to='/home/users'>用户管理</router-link>
+  </li>
+  <li class="menu-item">
+    <router-link to='/home/rights'>权限管理</router-link>
+  </li>
+  <li class="menu-item">
+    <router-link to='/home/goods'>商品管理</router-link>
+  </li>
+  <li class="menu-item">
+    <router-link to='/home/orders'>订单管理</router-link>
+  </li>
+  <li class="menu-item">
+    <router-link to='/home/settings'>系统设置</router-link>
+  </li>
+</ul>
+```
+
+2.打开 Home.vue 组件，在 右侧内容主体区域 中声明子路由的占位符：
+
+```vue
+<template>
+  <div class="home-container">
+    <!-- 头部组件 -->
+    <my-header></my-header>
+    <!-- 主体区域 -->
+    <div class="home-main-box">
+      <!-- 左侧边栏区域 -->
+      <my-aside>
+      </my-aside>
+      <!-- 右侧内容主体区域 -->
+      <div class="home-main-body">
+        <!-- 子路由的占位符 -->
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+3.在 router.js 中导入左侧菜单对应的组件：
+
+```js
+import Users from './components/menus/MyUsers.vue'
+import Rights from './components/menus/MyRights.vue'
+import Goods from './components/menus/MyGoods.vue'
+import Orders from './components/menus/MyOrders.vue'
+import Settings from './components/menus/MySettings.vue'
+```
+
+4.通过 children 属性，为 home 规则定义子路由规则如下：
+
+```js
+// 创建路由规则
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes: [
+        // 路由重定向
+        { path: '/', redirect: '/login' },
+        { path: '/login', component: Login, name: 'login' },
+        {
+            path: '/home', component: Home, name: 'home', 
+            // 当用户访问/home时，重定向至/home/users,
+            redirect:'/home/users',
+            children: [
+                { path: 'users', component: Users },
+                { path: 'rights', component: Rights },
+                { path: 'goods', component: Goods },
+                { path: 'orders', component: Orders },
+                { path: 'settings', component: Settings },
+            ]
+        }
+    ],
+})
 ```
 

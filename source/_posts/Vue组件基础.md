@@ -1,6 +1,6 @@
 ---
 title: Vue组件基础
-date: 2021-08-06 14:09:38
+date: 2021-08-10 10:06:12
 tags: [Vue, 组件]
 ---
 
@@ -2370,4 +2370,568 @@ export default {
 }
 </script>
 ```
+
+# ref引用
+
+## 1. 什么是 ref 引用
+
+ref 用来辅助开发者在**不依赖于 jQuery** 的情况下，*获取 DOM 元素或组件的引用*。
+每个 vue 的组件实例上，都包含一个 **$refs 对象**，里面存储着对应的 DOM 元素或组件的引用。默认情况下，**组件的 $refs 指向一个空对象**。  
+
+## 2. 使用 ref 引用 DOM 元素
+
+如果想要使用 ref 引用页面上的 DOM 元素，则可以按照如下的方式进行操作：  
+
+```vue
+<template>
+  <div>
+    <!-- 使用ref属性，为对应的DOM对象添加引用名称 -->
+    <h1 ref='myH1'>App根组件</h1>
+    <button @click="getRefs">获取$refs引用</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MyApp",
+  methods: {
+    getRefs() {
+    // 通过this.$refs 引用的名称可以获取到dom元素的引用
+      console.log(this.$refs); //{myH1: h1}
+      this.$refs.myH1.style.color='red';
+    },
+  },
+};
+</script>
+```
+
+## 3. 使用 ref 引用组件实例
+
+使用$refs拿到组件的引用后，可以调用组件的方法。
+
+```vue
+//父组件
+<template>
+  <div>
+    <h1 >App根组件</h1>
+    <button @click="getRefs" >重置为0</button>
+    <my-counter ref='counterRef'></my-counter>
+  </div>
+</template>
+
+<script>
+import MyCounter from './counter.vue'
+export default {
+  name: "MyApp",
+  components:{MyCounter},
+  methods: {
+    getRefs() {
+        // this.$refs.counterRef获取到组件
+        // 然后调用组件的方法reset
+        this.$refs.counterRef.reset();
+    },
+  },
+};
+</script>
+```
+
+```vue
+//被引用的组件
+<template>
+  <div class="counter-container">
+      <h3>counter组件---{{count}}</h3>
+      <button type='button' class="btn btn-info" @click='count+=1'>+1</button>
+  </div>
+</template>
+
+<script>
+export default {
+    name:'MyCounter',
+    data(){
+        return {
+            count:0,
+        }
+    },
+    methods: {
+        reset(){
+            this.count=0;
+        }
+    },
+}
+</script>
+
+```
+
+## 4. this.$nextTick(回调函数) 方法  
+
+通过布尔值 inputVisible 来控制组件中的文本框与按钮的按需切换。当文本框展示出来之后，如果希望它立即获得焦点，则尝试为其添加 ref 引用，并调用原生 DOM 对象的.focus() 方法，但由于组件的dom元素是异步更新的，当执行.focus()方法时，还没有获取到对应的dom元素。因此，会在控制台看到报错。
+
+```vue
+<template>
+  <div>
+      <h1>App 根组件</h1>
+      <hr>
+      <input type="text" v-if='inputVisible' ref='ipt'>
+      <button v-else @click='showInput'>展示输入框</button>
+  </div>
+</template>
+
+<script>
+export default {
+    name:'MyApp',
+    data(){
+        return {inputVisible:false}
+    },
+    methods: {
+        showInput(){
+            //展示文本框
+            this.inputVisible=true;
+            // dom元素是异步更新的，当点击了按钮后，dom还没有来得及更新
+            // 因此this.$refs.ipt 为undefined
+            console.log(this.$refs.ipt); //undefined
+            // 自动获取焦点
+            this.$refs.ipt.focus();
+        }
+    },
+}
+</script>
+```
+
+组件的 `$nextTick(回调函数)` 方法，会**把回调函数推迟到下一个 DOM 更新周期之后执行。**通俗的理解是：等组件的DOM 异步地重新渲染完成后，再执行 回调函数，从而能保证 回调函数可以操作到最新的 DOM 元素。  
+
+```vue
+<script>
+export default {
+    name:'MyApp',
+    data(){
+        return {inputVisible:false}
+    },
+    methods: {
+        showInput(){
+            //展示文本框
+            this.inputVisible=true;
+            // 把对文本框的操作推迟到下次dom更新后，否则页面上根本不存在文本框
+            this.$nextTick(()=>{
+                this.$refs.ipt.focus();
+            })
+        }
+    },
+}
+</script>
+```
+
+# 动态组件
+
+## 1. 什么是动态组件
+
+动态组件指的是**动态切换组件的显示与隐藏**。vue 提供了一个内置的 `<component>` 组件，专门用来实现组件的动态渲染。  
+
+① `<component>` 是组件的占位符
+
+② 通过 `is` 属性动态指定要渲染的组件名称
+
+③ `<component is="要渲染的组件的名称"></component>`  
+
+## 2. 如何实现动态组件渲染
+
+```vue
+<template>
+  <div>
+      <h1>App 根组件</h1>
+      <!-- 3.点击按钮动态切换组件的名称 -->
+      <!-- 注意组件的有引号包裹着 -->
+      <button @click="comName='MyHome'">首页</button>
+      <button @click="comName='MyMovie'">电影</button>
+      <!-- 2.通过is属性，动态指定要渲染的组件名称 -->
+      <component :is='comName'></component>
+  </div>
+</template>
+
+<script>
+export default {
+    components:{
+        MyHome,MyMovie
+    },
+    data(){
+        return {
+            // 1.当前要渲染的组件名称
+            comName:'MyHome',
+        }
+    }
+}
+</script>
+
+```
+
+## 3. 使用 keep-alive 保持状态
+
+在home组件声明了一个计数的变量count=0，点击按钮count的时候，count值会增加。但是当切换到了moive组件，再切换回home组件后，会发现count的值恢复到0了。
+
+![组件](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108091826851.gif)
+
+默认情况下，切换动态组件时无法保持组件的状态。此时可以使用 vue 内置的 `<keep-alive>` 组件保持动态组件的状态。组件切换后，并没有被销毁。
+
+```vue
+<keep-alive>
+    <component :is='comName'></component>
+</keep-alive>
+```
+
+![组件没有被销毁](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108091829447.gif)
+
+# 插槽
+
+## 1. 什么是插槽
+
+插槽（Slot）是 vue 为组件的封装者提供的能力。允许开发者在封装组件时，把**不确定的、希望由用户指定的部分**定义为插槽。  
+
+![image-20210809183221206](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108091832326.png)
+
+可以把插槽认为是组件封装期间，为用户预留的**内容的占位符**。  
+
+## 2. 体验插槽的基础用法
+
+在封装组件时，可以通过 `<slot>` 元素定义插槽，从而**为用户预留内容占位符**。示例代码如下：  
+
+```vue
+//MyCom.vue
+<template>
+  <div>
+      <p>这是第一个p标签</p>
+      <!-- 通过slot标签，为用户预留内容占位符 -->
+      <slot></slot>
+      <p>最后一个p标签</p>
+  </div>
+</template>
+```
+
+```vue
+//App.vue 
+<template>
+  <div>
+    <my-com>
+        <!-- 在使用my-com组件时，为插槽填充内容 -->
+      <p>hhhhhhh</p>
+    </my-com>
+  </div>
+</template>
+```
+
+### 2.1 没有预留插槽的内容会被丢弃
+
+如果在封装组件时没有预留任何 `<slot>` 插槽，则用户提供的任何自定义内容都会被丢弃。
+
+```vue
+<template>
+      <p>这是第一个p标签</p>
+      <!-- 封装组件时，没有预留任何插槽 -->
+      <p>最后一个p标签</p>
+</template>
+```
+
+```vue
+<my-com>
+    <!-- 自定义的内容会被丢弃 -->
+  <p>hhhhhhh</p>
+</my-com>
+```
+
+### 2.2 后备内容
+
+封装组件时，可以为预留的 `<slot>` 插槽提供后备内容（默认内容）。如果组件的使用者没有为插槽提供任何内容，则后备内容会生效。
+
+```vue
+<template>
+  <div>
+    <p>这是第一个p标签</p>
+    <slot>这是后备内容</slot>
+    <p>最后一个p标签</p>
+  </div>
+</template>
+```
+
+## 3. 具名插槽
+
+如果在封装组件时需要**预留多个插槽节点**，则需要为每个 `<slot>` 插槽指定具体的 name 名称。这种带有具体名称的插槽叫做“**具名插槽**”。示例代码如下：  
+
+```vue
+<div>
+    <header>
+      <!-- 希望把页头放在这里 -->
+      <slot name="header"></slot>
+    </header>
+    <main>
+      <!-- 我们希望把主要内容放在这里 -->
+      <slot name="main"></slot>
+    </main>
+    <footer>
+      <!-- 我们希望把页脚放在这里 -->
+      <slot name="footer"></slot>
+    </footer>
+</div>
+```
+
+注意：没有指定 name 名称的插槽，会有隐含的名称叫做 “default”。  
+
+### 3.1 为具名插槽提供内容
+
+在向具名插槽提供内容的时候，我们可以在一个 `<template>` 元素上使用 v-slot 指令，并以 v-slot 的参数的形式提供其名称。示例代码如下：  
+
+```vue
+<template>
+  <div>
+    <h1>APP 根组件</h1>
+    <my-com>
+      <template v-slot:header>
+        <p>文章标题</p>
+      </template>
+      <template v-slot:main>
+        <p>文章内容</p>
+      </template>
+      <template v-slot:footer>
+        <p>结尾</p>
+      </template>
+    </my-com>
+  </div>
+</template>
+```
+
+只有默认插槽使用的时候可以省略template，其余的插槽均不能省略template。
+
+### 3.2 具名插槽的简写形式
+
+跟 v-on 和 v-bind 一样，v-slot 也有缩写，即把参数之前的所有内容 (`v-slot:`) 替换为字符 `#`。例如 `v-slot:header`可以被重写为 `#header`  。
+
+```vue
+<my-com>
+  <template #header>
+    <p>文章标题</p>
+  </template>
+  <template #main>
+    <p>文章内容</p>
+  </template>
+  <template #footer>
+    <p>结尾</p>
+  </template>
+</my-com>
+```
+
+## 4. 作用域插槽
+
+在封装组件的过程中，可以为预留的 `<slot>` 插槽绑定 props 数据，这种**带有 props 数据的 `<slot>` 叫做“作用域插槽”**。示例代码如下：  
+
+```vue
+<template>
+  <div id="box">
+    <h3>这是MyCom组件</h3>
+    <!-- 插槽给组件提供数据 -->
+    <slot :info="information"></slot>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      information: {
+        phone: 12122133,
+        address: "北京市",
+      },
+    };
+  },
+};
+</script>
+```
+
+接收插槽中的数据：
+
+```vue
+<my-com>
+  <!-- 如把接收的数据命名为scope -->
+  <template v-slot:default='scope'>
+    <p>{{scope}}</p>
+<!-- { "info": { "phone": 12122133, "address": "北京市" } } -->
+  </template>
+</my-com>
+```
+
+### 4.1 解构作用域插槽的 Prop
+
+作用域插槽对外提供的数据对象，可以使用解构赋值简化数据的接收过程。示例代码如下：  
+
+```vue
+<my-com>
+  <!-- 解构赋值接收的数据 -->
+  <template v-slot:default="{ info }">
+    <p>{{ info.address }}</p>
+    <!-- 北京市 -->
+  </template>
+</my-com>
+```
+
+### 4.2 使用作用域插槽的小案例
+
+向用户提供mytable组件和table中的数据，但是用户想要按照自己的想法渲染表格。在封装 MyTable 组件的过程中，可以通过作用域插槽把表格每一行的数据传递给组件的使用者。  
+
+```vue
+//mytable.vue
+<template>
+  <table>
+      <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>State</th>
+      </tr>
+      <tr v-for='item in list' :key='item.id'>
+          <slot :user='item'>
+          </slot>
+      </tr>
+  </table>
+</template>
+
+<script>
+export default {
+    name:'MyTable',
+    data(){
+        return{
+            // 列表的数据
+            list:[
+                {id:1,name:'张三',state:true},
+                {id:2,name:'李四',state:false},
+                {id:3,name:'王五',state:true},
+            ]
+        }
+    }
+}
+</script>
+```
+
+在使用 MyTable 组件时，自定义单元格的渲染方式，并接收作用域插槽对外提供的数据。示例代码如下：  
+
+```vue
+<my-table>
+  <template #default='{user}'>
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td><input type="checkbox" :checked="user.state"></td>
+  </template>
+</my-table>
+```
+
+# 自定义指令
+
+## 1. 什么是自定义指令
+
+vue 官方提供了 v-for、v-model、v-if 等常用的内置指令。除此之外 vue 还允许开发者自定义指vue 中的自定义指令分为两类，分别是：
+
+- 私有自定义指令
+
+- 全局自定义指令  
+
+## 2. 声明私有自定义指令的语法
+
+在每个 vue 组件中，可以在 directives 节点下声明私有自定义指令。示例代码如下：  
+
+```js
+directives:{
+    // 自定义一个私有指令
+    // 声明指令的时候不需要加v- ,使用自定义指令的时候需要加v-
+    focus:{
+        // 当被绑定的元素插入到dom中时，自动触发mounted函数
+        mounted(el) {
+            // 让绑定的元素获得焦点
+            el.focus() 
+        },
+    }
+}
+```
+
+## 3. 使用自定义指令
+
+在使用自定义指令时，需要加上 v- 前缀。示例代码如下：  
+
+```vue
+<!-- 声明自定义指令时，指令的名字是focus -->
+<!-- 使用自定义指令时，需要加v-前缀 -->
+<input type="text" v-focus>
+```
+
+## 4. 声明全局自定义指令的语法
+
+全局共享的自定义指令需要通过“单页面应用程序的实例对象”进行声明，示例代码如下：  
+
+```js
+//main.js
+import { createApp } from 'vue'
+import App from './components/05.directive/App.vue'
+import './index.css'
+
+const app=createApp(App);
+
+//===========================
+//注册一个全局自定义指令，'v-focus'
+app.directive('focus',{
+    mounted(el){
+        el.focus();
+    }
+})
+//===========================
+
+app.mount('#app');
+```
+
+## 5.updated 函数
+
+**mounted 函数只在元素第一次插入 DOM 时被调用**，当 DOM 更新时 mounted 函数不会被触发。 **updated函数会在每次 DOM 更新完成后被调用。**示例代码如下：  
+
+```js
+directives: {
+focus: {
+    mounted(el) {
+    //第一次插入dom时触发这个函数
+    el.focus();
+    },
+    updated(el) {
+    // 每次dom更新时 都会触发updated函数
+    el.focus();
+    },
+},
+},
+```
+
+注意：在 vue2 的项目中使用自定义指令时，【 mounted -> bind 】【 updated -> update 】  
+
+## 6. 函数简写
+
+如果 mounted 和updated 函数中的逻辑完全相同，则可以简写成如下格式：  
+
+```js
+//全局
+app.directive('focus',(el)=>{
+    // 在mounted和updated时都会被触发
+    el.focus();
+})
+//===============
+// 私有指令
+directives:{
+    focus(el){
+        el.focus();
+    }
+}
+```
+
+## 7. 指令的参数值
+
+在绑定指令时，可以通过“等号”的形式为指令绑定具体的参数值，示例代码如下：  
+
+```vue
+<h1 v-color="'red'">App 根组件</h1>
+
+app.directive('color',(el,binding)=>{
+    // binding.value 便可以获取通过等号为指令绑定的值
+    el.style.color=binding.value;
+})
+```
+
+
 
