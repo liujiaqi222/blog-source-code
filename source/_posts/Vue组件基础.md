@@ -244,11 +244,11 @@ vue规定：每个组件对应的模板结构，需要定义到 `<template> `节
 
 2. 在template中定义根节点
 
-   在 vue 2.x 的版本中，<template> 节点内的 DOM 结构仅支持单个根节点：
+   在 vue 2.x 的版本中，`<template>` 节点内的 DOM 结构仅支持单个根节点：
 
    ![image-20210805171811774](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051718841.png)
 
-   但是，在 vue 3.x 的版本中，<template> 中支持定义多个根节点： 
+   但是，在 vue 3.x 的版本中，`<template>` 中支持定义多个根节点： 
 
    ![image-20210805171853981](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051718042.png) 
 
@@ -348,7 +348,7 @@ export default {
 
 ## 4.组件中的style节点
 
-vue 规定：组件内的 `<style> `节点是可选的，开发者可以在 <style> 节点中编写样式美化当前组件的 UI 结构。  
+vue 规定：组件内的 `<style> `节点是可选的，开发者可以在 `<style>` 节点中编写样式美化当前组件的 UI 结构。  
 
 ```vue
 <template>
@@ -557,7 +557,7 @@ import Swiper from './components/01.globalReg/Swiper.vue'
 app.component(Swiper.name,Swiper);
 ```
 
-## 2. 组件之间的样式冲突问题  
+## 2. 组件之间的样式冲突问题 
 
 默认情况下，写在 .vue 组件中的样式会全局生效，因此很容易造成多个组件之间的样式冲突问题。导致组件之间样式冲突的根本原因是：
 
@@ -599,7 +599,7 @@ export default {
 
 ### 2.1 思考：如何解决组件样式冲突的问题
 
-为每个组件分配**唯一的自定义属性**，在编写组件样式时，通过属性选择器来控制样式的作用域，示例代码如下：  
+为每个组件分配**唯一的自定义属性**，在编写组件样式时，通过属性选择器来控制样式的作用域，示例代码如下： 
 
 ```vue
 <template>
@@ -633,7 +633,7 @@ export default {
 
 ### 2.2 style 节点的 scoped 属性
 
-为了提高开发效率和开发体验，vue 为 **style 节点提供了 scoped 属性**，从而防止组件之间的样式冲突问题：  
+为了提高开发效率和开发体验，vue 为 **style 节点提供了 scoped 属性**，从而防止组件之间的样式冲突问题： 
 
 style节点的 scoped属性，用来自动为每个组件分配唯一的“自定义属性”，并自动为当前组件的DOM标签和style样式应用这个自定义属性，防止组件的样式冲突问题。
 
@@ -689,7 +689,7 @@ export default {
 
 ### 2.3 :deep()样式穿透
 
-如果给当前组件的 style 节点添加了**scoped** 属性，则**当前组件的样式对其子组件是不生效的**。如果想让某些样式对子组件生效，可以使用**`:deep()` 深度选择器**。  
+如果给当前组件的 style 节点添加了**scoped** 属性，则**当前组件的样式对其子组件是不生效的**。如果想让某些样式对子组件生效，可以使用**`:deep()` 深度选择器**。 
 
 ```vue
 <style lang="css" scoped>
@@ -714,7 +714,7 @@ p {
 </style>
 ```
 
-注意：`/deep/` 是 vue2.x 中实现样式穿透的方案。在 vue3.x 中推荐使用 `:deep()` 替代 `/deep/`。  
+注意：`/deep/` 是 vue2.x 中实现样式穿透的方案。在 vue3.x 中推荐使用 `:deep()` 替代 `/deep/`。 
 
 ## 3. 组件的 props
 
@@ -732,7 +732,7 @@ props 是**组件的自定义属性**，**组件的使用者可以通过 props �
 
 props 的作用：父组件通过 props 向子组件传递要展示的数据。
 
-props 的好处：提高了组件的复用性。  
+props 的好处：提高了组件的复用性。 
 
 ### 3.2 在组件中声明 props
 
@@ -781,7 +781,7 @@ export default {
 
 ### 3.3 无法使用未声明的 props
 
-如果父组件给子组件传递了子组件并没有声明的 props 属性，则这些属性会被忽略，无法被子组件使用，示例代码如下：  
+如果父组件给子组件传递了子组件并没有声明的 props 属性，则这些属性会被忽略，无法被子组件使用，示例代码如下： 
 
 ```vue
 <template>
@@ -2332,14 +2332,14 @@ vuex 是终极的组件之间的数据共享方案。在企业级的 vue 项目�
 import { createApp } from 'vue'
 import App from './components/06.network/App.vue'
 import './index.css'
-
+// 1.导入axios
 import axios from 'axios';
 
 const app=createApp(App);
-
+//2.配置请求根路径
 axios.defaults.baseURL='http://www.escook.cn';
 
-// 全局挂载axios
+// 3全局挂载axios
 app.config.globalProperties.$http=axios;
 
 app.mount('#app');

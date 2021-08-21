@@ -128,7 +128,8 @@ tags: Git
    - `git branch` 查看分支
    - `git branch 分支名称` 创建分支
    - `git checkout 分支名称` 切换分支 (切换分支之前需要提交)
-   - `git merge 来源分支` 合并分支（如果存在两个分支，dev和master，如果想要将dev分支的内容合并到master分支上，此时首先要回到master分支，然后再使用命令 git merge dev，而且dev分支依旧存在）
+   - `git merge 来源分支` 合并分支（如果存在两个分支，dev和master，如果想要将dev分支的内容合并到master分支上，此时首先要回到master分支，然后再使用命令 git merge dev，而且dev分支依旧存在） PS：之后还需要 `git push` 将代码推送到云端。
+   - `git push -u origin 分支名称` 首先要在本地切换到分支，然后执行该命令，在远程新建分支并推送分支的代码。
    - `git branch -d 分支名称` 删除分支（分支被合并后才允许删除）（-D 强制删除）
 
 
