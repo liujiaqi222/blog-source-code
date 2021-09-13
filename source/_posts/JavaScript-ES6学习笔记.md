@@ -838,7 +838,7 @@ console.log({...[1,2]}); //{0: 1, 1: 2}
 
 
 // 3.含对象属性的对象的
-// 对象属性不会继续被展开
+// 对象属性会继续被展开
 const apple={
     feature:{
         taste:"甜"
@@ -850,8 +850,8 @@ const pen={
     },
     use:"写字"
 }
-console.log({...apple}); //{feature: {…}}
-console.log({...apple,...pen}); //{feature: {…}, use: "写字"}
+console.log({...apple}); //{feature: {taste:'甜'}}
+console.log({...apple,...pen}); //{feature: {color:'black'}, use: "写字"}
 ```
 
 ### 对象展开的应用

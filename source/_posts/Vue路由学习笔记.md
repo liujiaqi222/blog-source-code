@@ -1591,3 +1591,37 @@ const tokenStr=localStorage.getItem('token');
 });
 ```
 
+
+
+## 5.实现页面标题
+
+首先用到了'meta'属性，然后在导航守卫中给将meta的值传给标题。
+
+<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108311140471.png" alt="image-20210831114031423" style="zoom:50%;" />
+
+```js
+import { createRouter, createWebHashHistory  } from 'vue-router';
+import Home from '../views/Home.vue';
+import Blogs from '../views/Blogs.vue';
+
+
+const routes = [
+    { path: '/', component: Home,meta:{title:'Home'}},
+    { path: '/home', name: 'Home', component: Home,meta:{title:'Home'} },
+    { path: '/blogs', name: 'Blogs', component: Blogs,meta:{title:'Blogs'} },
+
+];
+
+const router = createRouter({
+    history: createWebHashHistory (),
+    routes
+});
+
+router.beforeEach((to,from,next)=>{
+    document.title = `${to.meta.title} | FireBlogs`;
+    next();
+})
+
+export default router;
+```
+
