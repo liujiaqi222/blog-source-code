@@ -342,7 +342,7 @@ tags: [面试题, JS,JavaScript]
 
   - **所有的自由变量的查找，是在函数定义的地方，向上级作用域查找，不是在执行的地方。**
 
-  - ```js
+    ```js
     // 函数作为返回值
     function create() {
         let a = 100;
@@ -358,7 +358,9 @@ tags: [面试题, JS,JavaScript]
     fn(); //100
     ```
 
-  - ```js
+    
+
+    ```js
     // 函数作为参数
     function print(fn){
         let a = 200;
@@ -372,6 +374,8 @@ tags: [面试题, JS,JavaScript]
     }
     print(fn); //100
     ```
+
+    
 
 - this
 
@@ -1373,13 +1377,8 @@ tags: [面试题, JS,JavaScript]
 
       
 
-      作者：_小_七_
-      链接：https://www.jianshu.com/p/9c95db596df5
-      来源：简书
-      著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
   - 刷新操作方式，对缓存的影响
-
+  
     
 
 ### 题目
@@ -1392,9 +1391,7 @@ tags: [面试题, JS,JavaScript]
 
 4. 描述http的缓存机制？（**重要**）
 
-   https://jiaqicoder.com/fireblogs/
-
-
+   
 
 ## 手写
 
