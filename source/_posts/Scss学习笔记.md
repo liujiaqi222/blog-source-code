@@ -47,7 +47,7 @@ header blue{
 }
 ```
 
-当有多层级的html时，scss 的嵌套功能就比css好用太多了。当**然，在scss中，是完全支持普通css的写法！**
+当有多层级的html时，scss 的嵌套功能就比css好用太多了。当然，**在scss中，是完全支持普通css的写法！**
 
 另外，如果想要写鼠标悬停按钮的效果(`hover`)，用 scss 可以这样实现。
 
@@ -232,7 +232,7 @@ header {
 }
 ```
 
-### 继承
+## 继承
 
 现在，我已经写好了header的样式，接下来要写footer的样式，footer和header的大体样式相同。因此，我可以复制header的样式并粘贴到footer。
 
