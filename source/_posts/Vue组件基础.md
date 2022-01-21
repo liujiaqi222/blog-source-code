@@ -2371,6 +2371,12 @@ export default {
 </script>
 ```
 
+# 全局配置Echarts
+
+
+
+
+
 # ref引用
 
 ## 1. 什么是 ref 引用
