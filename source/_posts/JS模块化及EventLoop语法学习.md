@@ -240,7 +240,7 @@ getFile('./files/1.txt').then((r1)=>{
 
 JavaScript 是一门单线程执行的编程语言。也就是说，同一时间只能做一件事情。
 
-![image-20210804175533250](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108041755351.png)
+![image-20210804175533250](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108041755351.png)
 
 单线程执行任务队列的问题：
 如果前一个任务非常耗时，则后续的任务就不得不一直等待，从而导致程序假死的问题。
@@ -258,7 +258,7 @@ JavaScript 是一门单线程执行的编程语言。也就是说，同一时间
 
 ## 3.同步任务和异步任务的执行过程
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108041813594.png" alt="image-20210804181315494" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108041813594.png" alt="image-20210804181315494" style="zoom:67%;" />
 
 ① 同步任务由 JavaScript 主线程次序执行。
 ② 异步任务**委托给**宿主环境执行。
@@ -270,7 +270,7 @@ JavaScript 是一门单线程执行的编程语言。也就是说，同一时间
 
 JavaScript 主线程从“任务队列”中读取异步任务的回调函数，放到执行栈中依次执行。这个过程是循环不断的，所以整个的这种运行机制又称为 EventLoop（事件循环）。  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108041815433.png" alt="image-20210804181557376" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108041815433.png" alt="image-20210804181557376" style="zoom:67%;" />
 
 输出顺序：ADCB
 
@@ -283,7 +283,7 @@ JavaScript 主线程从“任务队列”中读取异步任务的回调函数，
 
 JavaScript 把异步任务又做了进一步的划分，异步任务又分为两类，分别是：
 
-![image-20210804182047617](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108041820682.png)
+![image-20210804182047617](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108041820682.png)
 
 ① 宏任务（macrotask）
 - 异步 Ajax 请求、
@@ -299,7 +299,7 @@ JavaScript 把异步任务又做了进一步的划分，异步任务又分为两
 
 ## 2.宏任务和微任务的执行顺序
 
-![image-20210804182243122](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108041822151.png)
+![image-20210804182243122](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108041822151.png)
 
 每一个宏任务执行完之后，都会检查**是否存在待执行的微任务**。
 

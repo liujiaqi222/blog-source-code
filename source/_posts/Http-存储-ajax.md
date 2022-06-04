@@ -12,7 +12,7 @@ tags: [Http,Ajax,存储]
 
 前后端通信是在“请求”和“响应”中完成的。
 
-![image-20210621140658177](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210621140706.png)
+![image-20210621140658177](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210621140706.png)
 
 ### 概念
 
@@ -28,7 +28,7 @@ tags: [Http,Ajax,存储]
 
 浏览器在解析HTML标签的时候，遇到一些特殊的标签，会再次向服务器发送请求。如`link`、`img` 、`script` 、 `iframe`等。
 
-![image-20210621142033666](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210621142034.png)
+![image-20210621142033666](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210621142034.png)
 
 还有一些标签，浏览器解析的时候，不会向服务器发送请求，但是用户可以使用他们向服务器发送请求。如a、form标签。
 
@@ -44,7 +44,7 @@ tags: [Http,Ajax,存储]
 
 ### `HTTP`请求过程
 
-![image-20210621143527702](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210621143529.png)
+![image-20210621143527702](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210621143529.png)
 
 
 
@@ -54,7 +54,7 @@ tags: [Http,Ajax,存储]
 
 #### HTTP报文格式
 
-![image-20210621144321261](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210621144322.png)
+![image-20210621144321261](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210621144322.png)
 
 请求报文=请求头(起始行+首部)+请求体 (get请求没有请求体)
 
@@ -72,7 +72,7 @@ get请求用于获取数据，post用于创造数据，put用于更新数据，d
 
 #### GET和POST的区别
 
-![image-20210621151809943](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210621151810.png)
+![image-20210621151809943](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210621151810.png)
 
 1.语义：
 
@@ -122,9 +122,9 @@ cookie可以跟踪统计用户访问该网站的习惯，比如访问时间，�
 
 可以在控制台->application->cookies的下拉菜单中看到本地存储的cookie信息。
 
-![image-20210621164223885](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210621164225.png)
+![image-20210621164223885](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210621164225.png)
 
-![image-20210621164622927](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210621164624.png)
+![image-20210621164622927](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210621164624.png)
 
 ### cookie用法
 
@@ -524,7 +524,7 @@ xhr.send(null);
 
 输出的结果：
 
-![image-20210622140552550](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622140553.png)
+![image-20210622140552550](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622140553.png)
 
 #### 4. GET请求
 
@@ -534,7 +534,7 @@ GET请求不能通过请求体来携带数据，但是可以通过请求头来�
  const url = 'https://www.imooc.com/api/http/search/suggest?words=js&age=18&name=alex';
 ```
 
-![image-20210622142043924](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622142044.png)
+![image-20210622142043924](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622142044.png)
 
 如果携带的数据是非英文字母的话，比如说汉字，就需要编码之后再发送给后端，不然会造成乱码问题可以使用 `encodeURIComponent()`编码。
 
@@ -546,7 +546,7 @@ const url = `https://www.imooc.com/api/http/search/suggest?words=${encodeURIComp
 
 POST请求通过请求体来携带数据，同时也可以通过请求头携带。
 
-![image-20210622143455252](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622143456.png)
+![image-20210622143455252](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622143456.png)
 
 ```js
 // POST请求通过请求体来携带数据，同时也可以通过请求头携带。
@@ -634,7 +634,7 @@ xhr.send(text);
 
 
 
-![image-20210622153303588](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622153304.png)
+![image-20210622153303588](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622153304.png)
 
 ### JSON应用
 
@@ -685,7 +685,7 @@ https(协议):// www.imooc.com(域名):443(端口号)/course/list(路径)
 
 `Access-Control-Allow-Origin: http://127.0.0.1:5500`，只允许特定的域名跨域请求。
 
-![image-20210622165409671](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622165410.png)
+![image-20210622165409671](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622165410.png)
 
 使用CORS跨域的过程：①浏览器发送跨域请求②后端在响应头中添加`Access-Control-Allow-Origin`的头信息③浏览器接收到响应④如果是同域下的请求，浏览器，不需要额外做什么，前后端可以进行通信。⑤如果是跨域请求，浏览器会从响应头中查找是否运行跨域访问，如果允许跨域，通信圆满完成，如果不允许跨域，就丢弃响应结果。
 
@@ -699,7 +699,7 @@ https(协议):// www.imooc.com(域名):443(端口号)/course/list(路径)
 https://www.imooc.com/api/http/jsonp?callback=handleResponse
 ```
 
-![image-20210622171826516](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622171827.png)
+![image-20210622171826516](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622171827.png)
 
 上面链接对应着一个函数的调用，函数名`handleResponse`可以通过链接自定义。
 
@@ -789,7 +789,7 @@ xhr.withCredentials=true;
 
 ### XHR的方法
 
-![image-20210622175213382](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622175214.png)
+![image-20210622175213382](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622175214.png)
 
 1.`abort()`方法
 
@@ -870,7 +870,7 @@ Content-Type字段用来告诉服务器，浏览器发送的数据是什么格�
 
 ### XHR事件
 
-![image-20210622183227814](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210622183234.png)
+![image-20210622183227814](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210622183234.png)
 
 1.`load`事件
 

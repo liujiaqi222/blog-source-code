@@ -28,13 +28,13 @@ tags: [面试题, JS,JavaScript]
   console.log(a.age); //21
   ```
 
-  ![image-20210906141809809](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109061418905.png)
+  ![image-20210906141809809](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109061418905.png)
 
   ----
 
   
 
-  ![image-20210906142017216](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109061420355.png)
+  ![image-20210906142017216](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109061420355.png)
 
   ```js
   // 常见值类型
@@ -659,7 +659,7 @@ tags: [面试题, JS,JavaScript]
 2. 用 `promise` 加载一张图片
 
    ```js
-   const url = 'https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109101448581.png';
+   const url = 'https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109101448581.png';
    
    function loadImg(url){
        return new Promise((resolve,reject)=>{
@@ -689,7 +689,7 @@ tags: [面试题, JS,JavaScript]
 
 - DOM 本质
   - 文档对象模型（Document Object Model），简称 DOM，将所有页面内容表示为可以修改的对象。DOM 将 HTML 表示为标签的树形结构。
-  - <img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109101535190.png" alt="image-20210910153552147" style="zoom:50%;" />
+  - <img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109101535190.png" alt="image-20210910153552147" style="zoom:50%;" />
   
 - DOM 节点的操作
   - 获取DOM节点
@@ -801,7 +801,7 @@ tags: [面试题, JS,JavaScript]
 
   - 对DOM查询做缓存
 
-    ![image-20210912195331814](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109121953925.png)
+    ![image-20210912195331814](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109121953925.png)
 
   - 将频繁操作改为一次性操作
 
@@ -1327,7 +1327,7 @@ tags: [面试题, JS,JavaScript]
 
       简单粗暴，如果资源没过期，就取缓存，如果过期了，则请求服务器。
 
-      ![image-20210914161638760](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109141616830.png)
+      ![image-20210914161638760](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109141616830.png)
 
       Cache-Control 在Response-Headers中，控制强制缓存的逻辑。
 
@@ -1358,7 +1358,7 @@ tags: [面试题, JS,JavaScript]
 
       服务器端判断客户端资源，是否和服务端资源一样，如果判断一直则返回304，否则返回200和最新的资源。
 
-      ![协商缓存](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109172239320.png)
+      ![协商缓存](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109172239320.png)
 
       response header里面的设置
 

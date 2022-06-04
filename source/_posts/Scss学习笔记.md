@@ -6,11 +6,11 @@ tags:
 
 在 vscode 中，首先需要安装 `live sass compiler`，将 sass 实时编译为 css 。
 
-![image-20210922223456637](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109222235743.png)
+![image-20210922223456637](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109222235743.png)
 
 点击底部的 watch sass，即可将 sass 文件实时编译为同名的 css 文件。
 
-![image-20210922223702754](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202109222237909.png)
+![image-20210922223702754](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202109222237909.png)
 
 
 

@@ -13,7 +13,7 @@ tags: Git
 
 版本管理是一种记录文件变化的方式，以便将来查阅特定版本的文件内容。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151949.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731151949.png)
 
 #### 1.1.2 人为维护文档版本的问题
 
@@ -26,7 +26,7 @@ tags: Git
 
 
 
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151953.png)
+   ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731151953.png)
 
    
 
@@ -36,7 +36,7 @@ tags: Git
 
    
 
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152128.png)
+   ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731152128.png)
 
    ### 1.3 Git 安装
 
@@ -52,7 +52,7 @@ tags: Git
    | ---------------- | ------------------ | ------------------- |
    | 用于存放提交记录 | 临时存放被修改文件 | 被Git管理的项目目录 |
 
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151946.png)
+   ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731151946.png)
 
    ### 1.5 Git 的使用
 
@@ -85,7 +85,7 @@ tags: Git
    - 将文件从暂存区中删除： `git rm --cached 文件`
    - 将 git 仓库中指定的更新记录恢复出来，并且覆盖暂存区和工作目录：`git rest --hard commitID` 
 
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151943.png)
+   ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731151943.png)
 
    ## 2. Git进阶
 
@@ -95,7 +95,7 @@ tags: Git
 
    使用分支，可以让我们从开发主线上分离出来，以免影响开发主线。
 
-   ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731151941.png)
+   ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731151941.png)
 
    
 
@@ -105,7 +105,7 @@ tags: Git
 
       
 
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152137.png)
+      ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731152137.png)
 
       
 
@@ -113,13 +113,13 @@ tags: Git
 
       
 
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152139.png)
+      ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731152139.png)
 
    3. 功能分支（feature）：作为开发具体功能的分支，基于开发分支创建
 
       
 
-      ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731152144.png)
+      ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731152144.png)
 
    **功能分支 -> 开发分支 -> 主分支**
 
@@ -143,9 +143,9 @@ tags: Git
 
      使用git add后将文件添加到暂存区后，还没有commit提交。此时使用git stash，将当前分支所有改动剪切到git的剪切板中，文件会回到之前的状态。如果使用git status，会发现显示的是noting to commit，因此便可以切换分支。
 
-     ![image-20210731224217165](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731224217.png)
+     ![image-20210731224217165](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731224217.png)
 
    - 恢复改动：`git stash pop`
 
-     ![image-20210731224359238](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731224421.png)
+     ![image-20210731224359238](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731224421.png)
 

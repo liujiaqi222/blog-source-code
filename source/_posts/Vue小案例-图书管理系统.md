@@ -12,7 +12,7 @@ tags: [VUE,案例]
 ⚫ 基于数据实现模板效果
 ⚫ 处里每行的操作按钮  
 
-![image-20210730181114909](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210730181123.png)
+![image-20210730181114909](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210730181123.png)
 
 ```html
 <!DOCTYPE html>
@@ -112,7 +112,7 @@ tags: [VUE,案例]
 ⚫ 添加按钮事件绑定
 ⚫ 实现添加业务逻辑  
 
-![image-20210730182422489](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210730182423.png)
+![image-20210730182422489](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210730182423.png)
 
 ```html
 <div id="app">
@@ -700,4 +700,4 @@ tags: [VUE,案例]
 </html>
 ```
 
-![image-20210731144257953](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210731144306.png)
+![image-20210731144257953](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210731144306.png)

@@ -16,11 +16,11 @@ tags: DOM,JS
 
 HTMLDivElement -> HTMLElement -> Element -> Node -> EventTarget->{一个对象}
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211217150719.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211217150719.png)
 
 如果把它继承的属性打印出来，会发现可以绕地球2圈。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211217151132.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211217151132.png)
 
 
 
@@ -136,13 +136,13 @@ document.body.appendChild(ulDom);
 正如你所预料的，比较两棵DOM树的差异是 Virtual DOM 算法最核心的部分，这也是所谓的 Virtual DOM 的 diff 算法。两个树的完全的 diff 算法是一个时间复杂度为 O(n^3) 的问题。但是在前端当中，你很少会跨越层级地移动DOM元素。
 
 1.  只比较同一层级，不跨级比较
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211217160056.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211217160056.png)
 上面的`div`只会和同一层级的`div`对比，第二层级的只会跟第二层级对比。这样算法复杂度就可以达到 O(n)。
 
 #### 1.深度优先遍历，记录差异
 
 在实际的代码中，会对新旧两棵树进行一个深度优先的遍历，这样每个节点都会有一个唯一的标记：
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211217160224.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211217160224.png)
 
 在深度优先遍历的时候，每遍历到一个节点就把该节点和新的的树进行对比。如果有差异的话就记录到一个对象里面。
 

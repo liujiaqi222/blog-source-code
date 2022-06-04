@@ -234,7 +234,7 @@ npm install webpack-dev-server@3.11.0 -D
 ② 再次运行 npm run dev 命令，重新进行项目的打包
 ③ 在浏览器中访问 http://localhost:8080 地址，查看自动打包效果  
 
-![image-20210804212537956](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108042125081.png)
+![image-20210804212537956](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108042125081.png)
 
 ### 2.3 打包生成的文件哪儿去了？
 
@@ -256,18 +256,18 @@ webpack-dev-server 生成到内存中的文件，***默认放到了项目的根�
 
 如我可以直接在http://localhost:8080/bundle.js访问到bundle文件。
 
-![image-20210804213748360](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108042137421.png)
+![image-20210804213748360](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108042137421.png)
 
 但是如果我打开http://localhost:8080/，却发现并没有bundle.js这个文件。因此bundle.js方到了根目录，但是不可见虚拟的。
 
-![image-20210804213908399](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108042139461.png)
+![image-20210804213908399](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108042139461.png)
 
 
 
 - 可以直接用 / 表示项目根目录，后面跟上要访问的文件名称，即可访问内存中的文件
 - 例如 /bundle.js 就表示要访问 webpack-dev-server 生成到内存中的 bundle.js 文件  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108042141449.png" alt="image-20210804214105396" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108042141449.png" alt="image-20210804214105396" style="zoom: 50%;" />
 
 ## 3.html-webpack-plugin
 
@@ -308,7 +308,7 @@ module.exports = {
 
 HTML 插件在生成的 index.html **页面的底部**，**自动注入**了打包的 bundle.js 文件  
 
-![image-20210804215836002](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108042158066.png)
+![image-20210804215836002](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108042158066.png)
 
 ## 4.devServer 节点
 
@@ -341,7 +341,7 @@ loader 加载器的作用：**协助 webpack 打包处理特定的文件模块**
 
 ## 2.loader的调用过程
 
-![image-20210804221504744](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108042215867.png)
+![image-20210804221504744](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108042215867.png)
 
 ## 3.打包css文件
 
@@ -670,7 +670,7 @@ module.exports = {
 
 前端项目在投入生产环境之前，都需要对 JavaScript 源代码进行压缩混淆，从而减小文件的体积，提高文件的加载效率。此时就不可避免的产生了另一个问题：对压缩混淆之后的代码除错（debug）是一件极其困难的事情  
 
-![image-20210805125849106](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051258183.png)
+![image-20210805125849106](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051258183.png)
 
 - 变量被替换成没有任何语义的名称
 -  空行和注释被剔除  
@@ -710,13 +710,13 @@ module.exports={
 
 在生产环境下，如果只想定位报错的具体行数，且不想暴露源码。此时可以将 devtool 的值设置为`nosources-source-map`。实际效果如图所示：  
 
-![image-20210805131426332](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051314367.png)
+![image-20210805131426332](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051314367.png)
 
 ### 4.2 定位行数且暴露源码
 
 在生产环境下，如果想在定位报错行数的同时，展示具体报错的源码。此时可以将 devtool 的值设置为source-map。
 
-![image-20210805131530831](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051315878.png)
+![image-20210805131530831](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051315878.png)
 
 ## 5.Source Map 的最佳实践  
 

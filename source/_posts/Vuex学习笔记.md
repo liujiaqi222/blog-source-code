@@ -293,7 +293,7 @@ export default store;
 
    > 最终效果：
 
-![最终效果](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108291505497.gif)
+![最终效果](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108291505497.gif)
 
 5. 一点优化：
 
@@ -492,7 +492,7 @@ button {
 </style>
 ```
 
-![image-20210829215744695](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108292157773.png)
+![image-20210829215744695](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108292157773.png)
 
 
 

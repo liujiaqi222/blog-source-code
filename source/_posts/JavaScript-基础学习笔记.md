@@ -10,15 +10,15 @@ tags: [JavaScript]
 
 ### 继承
 
-![image-20210514173152887](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514173152887.png)
+![image-20210514173152887](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514173152887.png)
 
-![image-20210514173008842](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514173008842.png)
+![image-20210514173008842](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514173008842.png)
 
-![image-20210514173046027](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514173046027.png)
+![image-20210514173046027](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514173046027.png)
 
-![image-20210514173456308](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514173456308.png)
+![image-20210514173456308](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514173456308.png)
 
-![image-20210514173658942](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514173658942.png)
+![image-20210514173658942](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514173658942.png)
 
 ```js
 // 父类
@@ -51,11 +51,11 @@ hanmeimei.study();
 
 ### 红绿灯小案例
 
-![image-20210523210759559](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210523210801.png)
+![image-20210523210759559](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210523210801.png)
 
-![image-20210523211055855](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210523211059.png)
+![image-20210523211055855](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210523211059.png)
 
-![image-20210523211228945](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210523211233.png)
+![image-20210523211228945](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210523211233.png)
 
 ```html
 <!DOCTYPE html>
@@ -123,17 +123,17 @@ hanmeimei.study();
 
 ### 炫彩小球
 
-![image-20210525000452880](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210525000501.png)
+![image-20210525000452880](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210525000501.png)
 
-![image-20210525000827824](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210525000829.png)
+![image-20210525000827824](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210525000829.png)
 
 
 
 ### 包装类
 
-![image-20210525204639793](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210525204649.png)
+![image-20210525204639793](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210525204649.png)
 
-![image-20210525205355774](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210525205357.png)
+![image-20210525205355774](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210525205357.png)
 
 ```js
 var a=new Number(123);
@@ -156,11 +156,11 @@ var e='慕课网';
 console.log(String.prototype.hasOwnProperty('toLowerCase')); //true
 ```
 
-![image-20210525211311085](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210525211312.png)
+![image-20210525211311085](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210525211312.png)
 
 ### Math数学对象
 
-![image-20210525211533279](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210525211534.png)
+![image-20210525211533279](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210525211534.png)
 
 ![image-20210525211545589](C:\Users\liujiaqi\AppData\Roaming\Typora\typora-user-images\image-20210525211545589.png)
 
@@ -168,14 +168,14 @@ console.log(String.prototype.hasOwnProperty('toLowerCase')); //true
 
 ### call和apply
 
-![image-20210514100907845](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514100907845.png)
+![image-20210514100907845](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514100907845.png)
 
 call和apply 都是用来修改函数中this的指向问题。
 
 其次就是它们不同的传参方式：注意上一句话中说他们的作用时有两个关键词 ‘函数’和‘this’，想要修改this 的指向，那么必然有一个this修改后的指向，而函数必然后关系到传参问题：call方法可以传给该函数的参数分别作为自己的多个参数，而apply方法必须将传给该函数的参数合并成一个数组作为自己的一个参数：
 
 
-![image-20210514101032131](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514101032131.png)
+![image-20210514101032131](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514101032131.png)
 
 ```js
 function sum(){
@@ -200,7 +200,7 @@ sum.apply(xiaoming);
 
 ### call和apply的区别
 
-![image-20210514101640663](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514101640663.png)
+![image-20210514101640663](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514101640663.png)
 
 ```js
 function sum(b1,b2){
@@ -217,7 +217,7 @@ sum.apply(xiaoming,[10,20]);
 
 
 
-![image-20210514102541446](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514102541446.png)
+![image-20210514102541446](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514102541446.png)
 
 ```js
 function fun1(){
@@ -233,59 +233,59 @@ fun1(33,44);
 
 ### new操作符调用函数
 
-![image-20210514113306796](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514113306796.png)
+![image-20210514113306796](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514113306796.png)
 
-![image-20210514113430404](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514113430404.png)
+![image-20210514113430404](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514113430404.png)
 
-![image-20210514113651439](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514113651439.png)
+![image-20210514113651439](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514113651439.png)
 
-![image-20210514113707453](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514113707453.png)
+![image-20210514113707453](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514113707453.png)
 
-![image-20210514113755873](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514113755873.png)
+![image-20210514113755873](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514113755873.png)
 
-![image-20210514113904986](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514113904986.png)
+![image-20210514113904986](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514113904986.png)
 
-![image-20210514114046769](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514114046769.png)
+![image-20210514114046769](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514114046769.png)
 
 
 
 ### 上下文规则总结
 
-![image-20210514114804916](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514114804916.png)
+![image-20210514114804916](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514114804916.png)
 
 ### 构造函数
 
-![image-20210514114959742](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514114959742.png)
+![image-20210514114959742](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514114959742.png)
 
-![image-20210514115122199](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514115122199.png)
+![image-20210514115122199](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514115122199.png)
 
-![image-20210514115131221](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514115131221.png)
+![image-20210514115131221](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514115131221.png)
 
-![image-20210514115249795](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514115249795.png)
+![image-20210514115249795](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514115249795.png)
 
-![image-20210514115349388](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514115349388.png)
+![image-20210514115349388](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514115349388.png)
 
-![image-20210514115424829](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514115424829.png)
+![image-20210514115424829](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514115424829.png)
 
-![image-20210514115645773](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514115645773.png)
+![image-20210514115645773](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514115645773.png)
 
 此时调用People函数，this指向window对象，执行函数会给window对象增加属性。
 
-![image-20210514115846373](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514115846373.png)
+![image-20210514115846373](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514115846373.png)
 
 ### 类与实例
 
-![image-20210514144158196](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514144158196.png)
+![image-20210514144158196](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514144158196.png)
 
-![image-20210514143717398](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514143717398.png)
+![image-20210514143717398](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514143717398.png)
 
-![image-20210514144057270](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514144057270.png)
+![image-20210514144057270](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514144057270.png)
 
 ### prototype
 
-![image-20210514144341395](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514144341395.png)
+![image-20210514144341395](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514144341395.png)
 
-![image-20210514144425779](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514144425779.png)
+![image-20210514144425779](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514144425779.png)
 
 ```js
 function sum(a,b){
@@ -297,9 +297,9 @@ console.log(typeof sum.prototype); //object
 console.log(sum.prototype.constructor===sum);//true
 ```
 
-![image-20210514145006344](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514145006344.png)
+![image-20210514145006344](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514145006344.png)
 
-![image-20210514145249629](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514145249629.png)
+![image-20210514145249629](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514145249629.png)
 
 ```js
 function People(name,age,sex){
@@ -313,9 +313,9 @@ console.log(xiaoming.__proto__===People.prototype); //true
 
 ### 原型链查找
 
-![image-20210514150037890](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514150037890.png)
+![image-20210514150037890](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514150037890.png)
 
-![image-20210514150159619](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514150159619.png)
+![image-20210514150159619](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514150159619.png)
 
 ```js
 function People(name,age,sex){
@@ -330,7 +330,7 @@ console.log(xiaoming.nationality); //中国
 
 ### hasOwnProperty
 
-![image-20210514151255674](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514151255674.png)
+![image-20210514151255674](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514151255674.png)
 
 ### in
 
@@ -358,9 +358,9 @@ console.log('nationality' in xiaoming);//true
 
 ### 在prototype上添加方法
 
-![image-20210514164655981](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514164655981.png)
+![image-20210514164655981](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514164655981.png)
 
-![image-20210514164616849](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514164616849.png)
+![image-20210514164616849](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514164616849.png)
 
 ```js
 function People(){
@@ -375,11 +375,11 @@ console.log(xiaoming.sayHello===xiaohong.sayHello); //false
 
 不是同一个函数，会造成内存浪费
 
-![image-20210514165403771](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514165403771.png)
+![image-20210514165403771](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514165403771.png)
 
-![image-20210514165517802](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514165517802.png)
+![image-20210514165517802](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514165517802.png)
 
-![image-20210514165542680](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514165542680.png)
+![image-20210514165542680](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514165542680.png)
 
 ```js
 function People(name,age,sex){
@@ -399,7 +399,7 @@ xiaoming.sayHello();
 
 ### 原型链的终点
 
-![image-20210514170702986](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514170702986.png)
+![image-20210514170702986](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514170702986.png)
 
 ```js
 function People(){
@@ -415,7 +415,7 @@ console.log(Object.prototype.hasOwnProperty('hasOwnProperty')); //true
 
 ### 数组的原型链
 
-![image-20210514172115376](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210514172115376.png)
+![image-20210514172115376](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210514172115376.png)
 
 ```js
 var arr=[32,43,89,23];
@@ -427,21 +427,21 @@ console.log(arr.__proto__.hasOwnProperty('push'));//true
 
 ### this关键字
 
-![image-20210512161554242](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512161554242.png)
+![image-20210512161554242](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512161554242.png)
 
-![image-20210512162007652](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512162007652.png)
+![image-20210512162007652](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512162007652.png)
 
-![image-20210512162204748](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512162204748.png)
+![image-20210512162204748](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512162204748.png)
 
 此时 this指向window对象
 
-![image-20210512162507140](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512162507140.png)
+![image-20210512162507140](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512162507140.png)
 
-![image-20210512162552392](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512162552392.png)
+![image-20210512162552392](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512162552392.png)
 
 **函数只有被调用时，this指向的对象才能被确定。**
 
-![image-20210512164031960](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512164031960.png)
+![image-20210512164031960](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512164031960.png)
 
 ### 上下文规则
 
@@ -449,45 +449,45 @@ console.log(arr.__proto__.hasOwnProperty('push'));//true
 
 规则1：对象打点调用它的方法函数，则函数的上下文是这个打点的对象
 
-![image-20210512164133505](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512164133505.png)
+![image-20210512164133505](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512164133505.png)
 
-![image-20210512164416166](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512164416166.png)
+![image-20210512164416166](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512164416166.png)
 
-![image-20210512164828850](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512164828850.png)
+![image-20210512164828850](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512164828850.png)
 
-![image-20210512165205479](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512165205479.png)
+![image-20210512165205479](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512165205479.png)
 
-![image-20210512165422669](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512165422669.png)
+![image-20210512165422669](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512165422669.png)
 
 #### 规则2
 
 规则2：圆括号直接调用函数，则函数的上下文是 window对象
 
-![image-20210512165517807](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512165517807.png)
+![image-20210512165517807](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512165517807.png)
 
-![image-20210512170057424](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512170057424.png)
+![image-20210512170057424](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512170057424.png)
 
-![image-20210512170413819](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512170413819.png)
+![image-20210512170413819](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512170413819.png)
 
 #### 规则3
 
 规则3：数组（类数组对象）枚举出函数进行调用，上下文是这个数组（类数组对象）
 
-![image-20210512170513429](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512170513429.png)
+![image-20210512170513429](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512170513429.png)
 
-![image-20210512170659401](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512170659401.png)
+![image-20210512170659401](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512170659401.png)
 
-![image-20210512170934757](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512170934757.png)
+![image-20210512170934757](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512170934757.png)
 
-![image-20210512171645322](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512171645322.png)
+![image-20210512171645322](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512171645322.png)
 
 #### 规则4
 
 规则4：IFE中的函数，上下文是 window对象
 
-![image-20210512171752464](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512171752464.png)
+![image-20210512171752464](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512171752464.png)
 
-![image-20210512172333001](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512172333001.png)
+![image-20210512172333001](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512172333001.png)
 
 ```js
 // 规则4：IFE中的函数，上下文是 window对象
@@ -510,11 +510,11 @@ obj.fn();
 
 规则5：定时器、延时器调用函数，上下文是 window对象
 
-![image-20210512172822842](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512172822842.png)
+![image-20210512172822842](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512172822842.png)
 
-![image-20210512174433974](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512174433974.png)
+![image-20210512174433974](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512174433974.png)
 
-![image-20210512174627203](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512174627203.png)
+![image-20210512174627203](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512174627203.png)
 
 ```js
 // 规则5：定时器、延时器调用函数，上下文是 window对象
@@ -540,9 +540,9 @@ setTimeout(function(){
 
 规则6：事件处理函数的上下文是绑定事件的D0M元素
 
-![image-20210512175301546](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512175301546.png)
+![image-20210512175301546](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512175301546.png)
 
-![image-20210512180239206](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512180239206.png)
+![image-20210512180239206](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512180239206.png)
 
 ```html
 <div id="box1"></div>
@@ -569,31 +569,31 @@ box3.onclick=setColorToRed;
 
 ### 对象的语法
 
-![image-20210510210902921](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510210902921.png)
+![image-20210510210902921](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510210902921.png)
 
-![image-20210510211118946](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510211118946.png)
+![image-20210510211118946](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510211118946.png)
 
-![image-20210510211436972](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510211436972.png)
+![image-20210510211436972](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510211436972.png)
 
 #### 属性的访问
 
-![image-20210510211531638](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510211531638.png)
+![image-20210510211531638](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510211531638.png)
 
-![image-20210510211600733](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510211600733.png)
+![image-20210510211600733](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510211600733.png)
 
-![image-20210510211730480](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510211730480.png)
+![image-20210510211730480](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510211730480.png)
 
 #### 属性的更改
 
-![image-20210510212307778](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510212307778.png)
+![image-20210510212307778](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510212307778.png)
 
 #### 属性的创建
 
-![image-20210510212341538](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510212341538.png)
+![image-20210510212341538](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510212341538.png)
 
 #### 属性的删除
 
-![image-20210510212519734](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510212519734.png)
+![image-20210510212519734](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510212519734.png)
 
 ```js
 var obj={
@@ -615,15 +615,15 @@ console.log(obj);
 
 ### 对象的方法
 
-![image-20210510213226954](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510213226954.png)
+![image-20210510213226954](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510213226954.png)
 
-![image-20210510213334215](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510213334215.png)
+![image-20210510213334215](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510213334215.png)
 
 ### 对象的遍历
 
-![image-20210510213925343](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510213925343.png)
+![image-20210510213925343](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510213925343.png)
 
-![image-20210510214039759](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510214039759.png)
+![image-20210510214039759](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510214039759.png)
 
 ```js
 var obj={
@@ -642,11 +642,11 @@ for(var k in obj){
 
 ### 对象的浅克隆
 
-![image-20210510214637721](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510214637721.png)
+![image-20210510214637721](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510214637721.png)
 
-![image-20210510214910285](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210510214910285.png)
+![image-20210510214910285](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210510214910285.png)
 
-![image-20210512150012885](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512150012885.png)
+![image-20210512150012885](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512150012885.png)
 
 ```js
 var obj1 = {
@@ -666,7 +666,7 @@ console.log(obj2);
 
 ### 对象的深克隆
 
-![image-20210512151514670](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210512151514670.png)
+![image-20210512151514670](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210512151514670.png)
 
 ```js
 var obj1={
@@ -710,13 +710,13 @@ console.log(obj2);
 
 ### BOM
 
-![image-20210509121109156](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509121109156.png)
+![image-20210509121109156](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509121109156.png)
 
-![image-20210509121151521](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509121151521.png)
+![image-20210509121151521](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509121151521.png)
 
 ### window对象
 
-![image-20210509121225354](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509121225354.png)
+![image-20210509121225354](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509121225354.png)
 
 ```js
 var a=3;
@@ -724,11 +724,11 @@ console.log(window.hasOwnProperty("a"));//true
 console.log(window.a); //3
 ```
 
-![image-20210509161051280](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509161051280.png)
+![image-20210509161051280](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509161051280.png)
 
 ### 窗口尺寸
 
-![image-20210509161422715](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509161422715.png)
+![image-20210509161422715](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509161422715.png)
 
 ```js
 console.log("包含滚动条的内宽",window.innerWidth);
@@ -738,7 +738,7 @@ console.log("窗口外宽",window.outerWidth);
 
 ### resize事件
 
-![image-20210509162306564](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509162306564.png)
+![image-20210509162306564](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509162306564.png)
 
 ```js
 window.onresize=function(){
@@ -749,17 +749,17 @@ window.onresize=function(){
 
 ### 已滚动高度
 
-![image-20210509162749574](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509162749574.png)
+![image-20210509162749574](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509162749574.png)
 
-![image-20210509162908429](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509162908429.png)
+![image-20210509162908429](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509162908429.png)
 
 ### scroll 事件
 
-![image-20210509163422591](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509163422591.png)
+![image-20210509163422591](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509163422591.png)
 
 ### navigator对象
 
-![image-20210509163723801](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509163723801.png)
+![image-20210509163723801](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509163723801.png)
 
 ```js
 console.log("浏览器名称",window.navigator.appName);
@@ -770,7 +770,7 @@ console.log("操作系统",navigator.platform);
 
 ### history对象
 
-![image-20210509164520393](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509164520393.png)
+![image-20210509164520393](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509164520393.png)
 
 ```html
 <h1>我是history方法</h1>
@@ -789,9 +789,9 @@ console.log("操作系统",navigator.platform);
 
 ### location对象
 
-![image-20210509165423038](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509165423038.png)
+![image-20210509165423038](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509165423038.png)
 
-![image-20210509165814691](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509165814691.png)
+![image-20210509165814691](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509165814691.png)
 
 ```html
 <button id="btn1">去慕课</button>
@@ -811,11 +811,11 @@ console.log("操作系统",navigator.platform);
 </script>
 ```
 
-![image-20210509170103070](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509170103070.png)
+![image-20210509170103070](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509170103070.png)
 
 ### 返回顶部按钮
 
-![image-20210509170300064](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509170300064.png)
+![image-20210509170300064](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509170300064.png)
 
 ```html
 <!DOCTYPE html>
@@ -865,7 +865,7 @@ console.log("操作系统",navigator.platform);
 
 ### 楼层导航效果
 
-![image-20210509171726760](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210509171726760.png)
+![image-20210509171726760](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210509171726760.png)
 
 ```html
 <!DOCTYPE html>
@@ -988,7 +988,7 @@ console.log("操作系统",navigator.platform);
 
 
 
-![image-20210426233600830](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210426233600830.png)
+![image-20210426233600830](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210426233600830.png)
 
 ```js
 var ul=document.getElementById("list");
@@ -1001,17 +1001,17 @@ for(i=0;i<lis.length;i++){
 }
 ```
 
-![image-20210426234936537](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210426234936537.png)
+![image-20210426234936537](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210426234936537.png)
 
 
 
-![image-20210427000510771](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427000510771.png)
+![image-20210427000510771](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427000510771.png)
 
 ### 事件委托
 
-![image-20210427000856702](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427000856702.png)
+![image-20210427000856702](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427000856702.png)
 
-![image-20210427000930553](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427000930553.png)
+![image-20210427000930553](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427000930553.png)
 
 ```js
 <ul id="list">
@@ -1031,9 +1031,9 @@ list.onclick=function(e){
 }
 ```
 
-![image-20210427002215972](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427002215972.png)
+![image-20210427002215972](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427002215972.png)
 
-![image-20210427003616423](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427003616423.png)
+![image-20210427003616423](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427003616423.png)
 
 ```js
 <ul id="list">
@@ -1053,13 +1053,13 @@ onmouseenter不冒泡，没有冒泡过程，因此e.target无法识别最早触
 
 ### 定时器延时器
 
-![image-20210427004350325](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427004350325.png)
+![image-20210427004350325](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427004350325.png)
 
-![image-20210427004855323](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427004855323.png)
+![image-20210427004855323](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427004855323.png)
 
-![image-20210427004957353](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427004957353.png)
+![image-20210427004957353](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427004957353.png)
 
-![image-20210427005147286](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210427005147286.png)
+![image-20210427005147286](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210427005147286.png)
 
 ```html
 <h1 id="info">0</h1>
@@ -1087,25 +1087,25 @@ onmouseenter不冒泡，没有冒泡过程，因此e.target无法识别最早触
 
 为了防止定时器叠加，应该在设置定时器之前先清除定时器。如果不清除定时器，用户多次点击时会创建多个定时器。
 
-![image-20210508145500526](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508145500526.png)
+![image-20210508145500526](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508145500526.png)
 
-![image-20210508145523493](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508145523493.png)
+![image-20210508145523493](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508145523493.png)
 
 ### 异步语句
 
-![image-20210508150207492](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508150207492.png)
+![image-20210508150207492](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508150207492.png)
 
-![image-20210508150338194](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508150338194.png)
+![image-20210508150338194](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508150338194.png)
 
 ### 定时器实现动画
 
-![image-20210508150723680](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508150723680.png)
+![image-20210508150723680](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508150723680.png)
 
 ### js和css3实现动画
 
-![image-20210508152155375](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508152155375.png)
+![image-20210508152155375](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508152155375.png)
 
-![动画](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/%E5%8A%A8%E7%94%BB.gif)
+![动画](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/%E5%8A%A8%E7%94%BB.gif)
 
 点击按钮后实现盒子左右移动
 
@@ -1136,13 +1136,13 @@ btn.onclick=function(){
 
 ### 函数节流
 
-![image-20210508154141227](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508154141227.png)
+![image-20210508154141227](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508154141227.png)
 
-![image-20210508154251078](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508154251078.png)
+![image-20210508154251078](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508154251078.png)
 
 ### 无缝连续滚动
 
-![image-20210508174625810](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210508174625810.png)
+![image-20210508174625810](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210508174625810.png)
 
 ```html
 <!DOCTYPE html>
@@ -1360,27 +1360,27 @@ btn.onclick=function(){
 
 ![image-20210424211412615](C:\Users\24734\AppData\Roaming\Typora\typora-user-images\image-20210424211412615.png)
 
-![image-20210424211636507](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424211636507.png)
+![image-20210424211636507](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424211636507.png)
 
-![image-20210424211837616](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424211837616.png)
+![image-20210424211837616](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424211837616.png)
 
-![image-20210424212039029](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424212039029.png)
+![image-20210424212039029](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424212039029.png)
 
-![image-20210424212112609](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424212112609.png)
+![image-20210424212112609](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424212112609.png)
 
-![image-20210424212354417](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424212354417.png)
+![image-20210424212354417](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424212354417.png)
 
-![image-20210424221619105](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424221619105.png)
+![image-20210424221619105](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424221619105.png)
 
-![image-20210424221810265](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424221810265.png)
+![image-20210424221810265](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424221810265.png)
 
-![image-20210424222754200](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424222754200.png)
+![image-20210424222754200](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424222754200.png)
 
 给window添加onload事件监听
 
-![image-20210424223445993](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424223445993.png)
+![image-20210424223445993](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424223445993.png)
 
-![image-20210424223514608](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424223514608.png)
+![image-20210424223514608](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424223514608.png)
 
 ```html
 <div id="box1">
@@ -1406,25 +1406,25 @@ btn.onclick=function(){
 </script>
 ```
 
-![image-20210424224417448](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424224417448.png)
+![image-20210424224417448](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424224417448.png)
 
-![image-20210424224438247](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424224438247.png)
+![image-20210424224438247](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424224438247.png)
 
-![image-20210424224551111](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424224551111.png)
+![image-20210424224551111](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424224551111.png)
 
-![image-20210424224702206](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424224702206.png)
+![image-20210424224702206](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424224702206.png)
 
-![image-20210424225256867](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424225256867.png)
+![image-20210424225256867](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424225256867.png)
 
 ### 父节点子节点
 
-![image-20210424225709892](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424225709892.png)
+![image-20210424225709892](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424225709892.png)
 
-![image-20210424225741728](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424225741728.png)
+![image-20210424225741728](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424225741728.png)
 
-![image-20210424225851251](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424225851251.png)
+![image-20210424225851251](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424225851251.png)
 
-![image-20210424225936093](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210424225936093.png)
+![image-20210424225936093](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210424225936093.png)
 
 ```html
 <body>
@@ -1509,9 +1509,9 @@ function getAllElementSibling(node){
 }
 ```
 
-![image-20210425012724520](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425012724520.png)
+![image-20210425012724520](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425012724520.png)
 
-![image-20210425124524341](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425124524341.png)
+![image-20210425124524341](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425124524341.png)
 
 ```js
 document.getElementById("box").style.backgroundColor="red";
@@ -1521,7 +1521,7 @@ oBox.style.backgroundColor="red";
 
 设置的是元素的行内样式
 
-![image-20210425125801427](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425125801427.png)
+![image-20210425125801427](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425125801427.png)
 
 ```js
 var a=document.getElementsByTagName("a");
@@ -1529,7 +1529,7 @@ a[0].href="https://www.mi.com";
 a[0].innerText="去小米"
 ```
 
-![image-20210425130732587](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425130732587.png)
+![image-20210425130732587](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425130732587.png)
 
 ```js
 var box=document.getElementById("box");
@@ -1538,13 +1538,13 @@ var n=box.getAttribute("data-n");
 alert(n);
 ```
 
-![image-20210425132505214](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425132505214.png)
+![image-20210425132505214](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425132505214.png)
 
-![image-20210425132545102](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425132545102.png)
+![image-20210425132545102](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425132545102.png)
 
-![image-20210425132704353](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425132704353.png)
+![image-20210425132704353](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425132704353.png)
 
-![image-20210425132730793](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425132730793.png)
+![image-20210425132730793](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425132730793.png)
 
 ```js
 var oBox=document.getElementById("box");
@@ -1599,9 +1599,9 @@ oBox.insertBefore(pp,oBox.firstChild);
 </html>
 ```
 
-![image-20210425140413994](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425140413994.png)
+![image-20210425140413994](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425140413994.png)
 
-![image-20210425140803675](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425140803675.png)
+![image-20210425140803675](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425140803675.png)
 
 ```html
 <div id="box1">
@@ -1618,7 +1618,7 @@ oBox.insertBefore(pp,oBox.firstChild);
 
 ```
 
-![image-20210425143430030](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425143430030.png)
+![image-20210425143430030](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425143430030.png)
 
 ```html
 <div id="box">
@@ -1633,7 +1633,7 @@ oBox.insertBefore(pp,oBox.firstChild);
 </script>
 ```
 
-![image-20210425144940421](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425144940421.png)
+![image-20210425144940421](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425144940421.png)
 
 ```html
 <div id="box1">
@@ -1654,21 +1654,21 @@ oBox.insertBefore(pp,oBox.firstChild);
 </script>
 ```
 
-![image-20210425145809152](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425145809152.png)
+![image-20210425145809152](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425145809152.png)
 
-![image-20210425145924019](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425145924019.png)
+![image-20210425145924019](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425145924019.png)
 
-![image-20210425145954659](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425145954659.png)
+![image-20210425145954659](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425145954659.png)
 
 ### 鼠标事件
 
-![image-20210425150543512](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425150543512.png)
+![image-20210425150543512](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425150543512.png)
 
 onclick表示鼠标点击了并且松开了鼠标，onmousedown只需要点击，不要求鼠标抬起。使用onclick，如果鼠标点击了但未抬起，离开了监听区域再抬起，onclick事件不会被触发 。
 
-![image-20210425151939871](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425151939871.png)
+![image-20210425151939871](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425151939871.png)
 
-![image-20210425152734651](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425152734651.png)
+![image-20210425152734651](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425152734651.png)
 
 ```html
 <form id="myform">
@@ -1706,15 +1706,15 @@ onclick表示鼠标点击了并且松开了鼠标，onmousedown只需要点击�
 </script>
 ```
 
-![image-20210425154321740](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425154321740.png)
+![image-20210425154321740](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425154321740.png)
 
-![image-20210425154627554](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425154627554.png)
+![image-20210425154627554](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425154627554.png)
 
-![image-20210425170449205](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425170449205.png)
+![image-20210425170449205](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425170449205.png)
 
-![image-20210425170616058](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425170616058.png)
+![image-20210425170616058](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425170616058.png)
 
-![image-20210425170931589](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425170931589.png)
+![image-20210425170931589](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425170931589.png)
 
 ```html
 <div id="box1">
@@ -1748,13 +1748,13 @@ onclick表示鼠标点击了并且松开了鼠标，onmousedown只需要点击�
 </script>
 ```
 
-![image-20210425171644291](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425171644291.png)
+![image-20210425171644291](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425171644291.png)
 
 **注意** ：最内层的盒子不再区分冒泡和捕获的顺序，因此如果先写onclick，会先执行onclick，先写addEventListener会先执行addEventListener。
 
-![image-20210425172323398](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425172323398.png)
+![image-20210425172323398](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425172323398.png)
 
-![image-20210425174106649](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425174106649.png)
+![image-20210425174106649](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425174106649.png)
 
 
 
@@ -1762,13 +1762,13 @@ onclick表示鼠标点击了并且松开了鼠标，onmousedown只需要点击�
 
 client ：相对于浏览器的位置；page相对于整个网页的位置；offset相对于事件源的位置。
 
-![image-20210425174306992](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425174306992.png)
+![image-20210425174306992](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425174306992.png)
 
-![image-20210425174613199](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425174613199.png)
+![image-20210425174613199](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425174613199.png)
 
-![image-20210425174702163](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425174702163.png)
+![image-20210425174702163](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425174702163.png)
 
-![image-20210425174718752](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425174718752.png)
+![image-20210425174718752](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425174718752.png)
 
 
 
@@ -1780,15 +1780,15 @@ box.onmousemove=function(e){
 }
 ```
 
-![头 分](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/%E5%A4%B4%20%E5%88%86.gif)
+![头 分](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/%E5%A4%B4%20%E5%88%86.gif)
 
 注意：监听鼠标相对元素的的位置时，如果元素内部还有元素，则鼠标进入元素内部的元素时是相对元素内部的元素位置。
 
-![image-20210425181302457](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425181302457.png)
+![image-20210425181302457](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425181302457.png)
 
-![image-20210425181343152](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425181343152.png)
+![image-20210425181343152](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425181343152.png)
 
-![image-20210425181502749](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425181502749.png)
+![image-20210425181502749](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425181502749.png)
 
 使小方块移动：
 
@@ -1838,9 +1838,9 @@ box.onmousemove=function(e){
 </html>
 ```
 
-![image-20210425184317001](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425184317001.png)
+![image-20210425184317001](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425184317001.png)
 
-![image-20210425184330354](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425184330354.png)
+![image-20210425184330354](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425184330354.png)
 
 ```html
 <p>
@@ -1862,7 +1862,7 @@ box.onmousemove=function(e){
 
 ps:只能阻止英文键盘时默认操作。
 
-![image-20210425185814339](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425185814339.png)
+![image-20210425185814339](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425185814339.png)
 
 ```html
 <div id="box">
@@ -1887,7 +1887,7 @@ ps:只能阻止英文键盘时默认操作。
 </script>
 ```
 
-![image-20210425191934115](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425191934115.png)
+![image-20210425191934115](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425191934115.png)
 
 ```html
 <div id="box">
@@ -1914,7 +1914,7 @@ ps:只能阻止英文键盘时默认操作。
 
 注意stopPropagation()方法添加的位置，不是被阻止的元素，而是需要被阻止的元素的上一个元素。
 
-![image-20210425193253686](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210425193253686.png)
+![image-20210425193253686](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210425193253686.png)
 
 ```html
 <!DOCTYPE html>
@@ -1962,9 +1962,9 @@ ps:只能阻止英文键盘时默认操作。
 </html>
 ```
 
-![image-20210422145249895](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422145249895.png)
+![image-20210422145249895](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422145249895.png)
 
-![image-20210422145322365](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422145322365.png)
+![image-20210422145322365](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422145322365.png)
 
 ```javascript
 fun(); //hahahaha
@@ -1979,11 +1979,11 @@ var fun2=function(){
 
 将匿名函数赋值给了fun2()，但赋值是不能被hoist，所以调用fun2();相当于undefined。
 
-![image-20210422150254424](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422150254424.png)
+![image-20210422150254424](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422150254424.png)
 
-![image-20210422150955082](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422150955082.png)
+![image-20210422150955082](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422150955082.png)
 
-![image-20210422151023439](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422151023439.png)
+![image-20210422151023439](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422151023439.png)
 
 ```js
 function add(a,b){
@@ -1995,7 +1995,7 @@ add(3,7);
 add(3); //NaN
 ```
 
-![image-20210422151811503](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422151811503.png)
+![image-20210422151811503](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422151811503.png)
 
 ```js
 function fun(){
@@ -2016,9 +2016,9 @@ function fun(){
 fun(1,2,3,4,5);
 ```
 
-![image-20210422154029087](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422154029087.png)
+![image-20210422154029087](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422154029087.png)
 
-![image-20210422154730077](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422154730077.png)
+![image-20210422154730077](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422154730077.png)
 
 ```js
 // 喇叭花数 一个三位数abc=a!+b!+c!
@@ -2043,9 +2043,9 @@ function labahua(){
 labahua();//145
 ```
 
-![image-20210422160633867](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422160633867.png)
+![image-20210422160633867](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422160633867.png)
 
-![image-20210422160742824](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422160742824.png)
+![image-20210422160742824](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422160742824.png)
 
 ```js
 var arr=[12,42,43,53,25];
@@ -2057,11 +2057,11 @@ arr.sort(
 )
 ```
 
-![image-20210422161609340](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422161609340.png)
+![image-20210422161609340](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422161609340.png)
 
-![image-20210422161929411](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422161929411.png)
+![image-20210422161929411](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422161929411.png)
 
-![image-20210422162035276](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422162035276.png)
+![image-20210422162035276](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422162035276.png)
 
 
 
@@ -2085,7 +2085,7 @@ function Fibonacci(n){
 console.log(Fibonacci(5));
 ```
 
-![image-20210422164917380](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422164917380.png)
+![image-20210422164917380](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422164917380.png)
 
 ```js
 // 原数组
@@ -2107,7 +2107,7 @@ var arr2=deepClone(arr1);
 console.log(arr2);
 ```
 
-![image-20210422195409072](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422195409072.png)
+![image-20210422195409072](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422195409072.png)
 
 
 
@@ -2133,9 +2133,9 @@ fun();//NaN
 console.log(m);//10
 ```
 
-![image-20210422200146588](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422200146588.png)
+![image-20210422200146588](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422200146588.png)
 
-![image-20210422202157590](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422202157590.png)
+![image-20210422202157590](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422202157590.png)
 
 ```js
 var a=10;
@@ -2152,13 +2152,13 @@ function fun(){
 fun();
 ```
 
-![image-20210422203136098](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422203136098.png)
+![image-20210422203136098](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422203136098.png)
 
 需要调用函数fun(),才会定义a。
 
-![image-20210422204520582](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422204520582.png)
+![image-20210422204520582](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422204520582.png)
 
-![image-20210422204555571](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422204555571.png)
+![image-20210422204555571](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422204555571.png)
 
 ```js
 function fun(){
@@ -2176,13 +2176,13 @@ var name="hahaha";
 inn();  //  “慕课网”弹窗
 ```
 
-![image-20210422204720475](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422204720475.png)
+![image-20210422204720475](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422204720475.png)
 
-![image-20210422204834706](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422204834706.png)
+![image-20210422204834706](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422204834706.png)
 
-![image-20210422204905121](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422204905121.png)
+![image-20210422204905121](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422204905121.png)
 
-![image-20210422205042419](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422205042419.png)
+![image-20210422205042419](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422205042419.png)
 
 ```js
 function checkTemp(standard){
@@ -2201,7 +2201,7 @@ checkA(37.1); //会记住standard的值 体温正常
 checkB(37.3); //会记住standard的值 体温正常
 ```
 
-![image-20210422210317329](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422210317329.png)
+![image-20210422210317329](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422210317329.png)
 
 ```js
 // 封装一个私有化变量的函数
@@ -2223,13 +2223,13 @@ obj.add();
 console.log(obj.getA());
 ```
 
-![image-20210422223822932](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422223822932.png)
+![image-20210422223822932](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422223822932.png)
 
-![image-20210422224248221](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422224248221.png)
+![image-20210422224248221](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422224248221.png)
 
-![image-20210422224359706](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422224359706.png)
+![image-20210422224359706](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422224359706.png)
 
-![image-20210422224618067](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422224618067.png)
+![image-20210422224618067](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422224618067.png)
 
 ```js
 var age=12;
@@ -2250,11 +2250,11 @@ else{
 alert(title);
 ```
 
-![image-20210422225524799](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422225524799.png)
+![image-20210422225524799](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422225524799.png)
 
 变量i真的是全局变量。
 
-![image-20210422230323224](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210422230323224.png)
+![image-20210422230323224](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210422230323224.png)
 
 ```js
 var arr=[];
@@ -2296,39 +2296,39 @@ for(var i=0;i<5;i++){
 
 
 
-![image-20210408105225337](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210408105225337.png)
+![image-20210408105225337](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210408105225337.png)
 
-![image-20210408105438682](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210408105438682.png)
+![image-20210408105438682](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210408105438682.png)
 
-![image-20210408105802666](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210408105802666.png)
+![image-20210408105802666](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210408105802666.png)
 
 ![image-20210408105843556](C:\Users\24734\AppData\Roaming\Typora\typora-user-images\image-20210408105843556.png
 
-![image-20210410105159714](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410105159714.png)
+![image-20210410105159714](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410105159714.png)
 
-![image-20210410105247667](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410105247667.png)
+![image-20210410105247667](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410105247667.png)
 
-![image-20210410105620746](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410105620746.png)
+![image-20210410105620746](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410105620746.png)
 
-![image-20210410105542856](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410105542856.png)
+![image-20210410105542856](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410105542856.png)
 
 靠谱方法是第二和第四个
 
-![image-20210410105813366](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410105813366.png)
+![image-20210410105813366](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410105813366.png)
 
-![image-20210410110013827](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410110013827.png)
+![image-20210410110013827](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410110013827.png)
 
 盒子上下边距塌陷
 
-![image-20210410110353802](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410110353802.png)
+![image-20210410110353802](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410110353802.png)
 
-![image-20210410111501896](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410111501896.png)
+![image-20210410111501896](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410111501896.png)
 
-![image-20210410112002227](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410112002227.png)
+![image-20210410112002227](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410112002227.png)
 
 使用clear:both; 后面的盒子设置margin无法对设置了浮动的盒子生效。
 
-![image-20210410112423369](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410112423369.png)
+![image-20210410112423369](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410112423369.png)
 
 ```html
 <!DOCTYPE html>
@@ -2374,7 +2374,7 @@ for(var i=0;i<5;i++){
 
 此处是第2个div对第1个div清除浮动，所以在第二个div使用before伪元素，如果是第1个div对第2个div清除浮动，则在第一个div使用after伪元素。
 
-![image-20210410113016497](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410113016497.png)
+![image-20210410113016497](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410113016497.png)
 
 ```html
 <div>
@@ -2388,9 +2388,9 @@ for(var i=0;i<5;i++){
 </div>
 ```
 
-![image-20210410113532801](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410113532801.png)
+![image-20210410113532801](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410113532801.png)
 
-![image-20210410115353142](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410115353142.png)
+![image-20210410115353142](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410115353142.png)
 
 ```html
 <style>
@@ -2416,29 +2416,29 @@ for(var i=0;i<5;i++){
 </body>
 ```
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410115528112.png" alt="image-20210410115528112" style="zoom:25%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410115528112.png" alt="image-20210410115528112" style="zoom:25%;" />
 
-![image-20210410115641404](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410115641404.png)
+![image-20210410115641404](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410115641404.png)
 
 相对定位不会脱离标准流
 
-![image-20210410115908962](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410115908962.png)
+![image-20210410115908962](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410115908962.png)
 
-![image-20210410121414043](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410121414043.png)
+![image-20210410121414043](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410121414043.png)
 
 非常酷，值得再试
 
-![image-20210410121514541](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410121514541.png)
+![image-20210410121514541](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410121514541.png)
 
-![image-20210410122025627](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410122025627.png)
+![image-20210410122025627](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410122025627.png)
 
-![image-20210410122545843](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410122545843.png)
+![image-20210410122545843](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410122545843.png)
 
-![image-20210410122906749](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410122906749.png)
+![image-20210410122906749](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410122906749.png)
 
 当然父元素也可以是绝对定位。
 
-![image-20210410140559231](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410140559231.png)
+![image-20210410140559231](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410140559231.png)
 
 ```css
 width: 80px;
@@ -2451,7 +2451,7 @@ left:50%;
 margin-left: -40px;
 ```
 
-![image-20210410145827212](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410145827212.png)
+![image-20210410145827212](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410145827212.png)
 
 ```html
 <!DOCTYPE html>
@@ -2493,41 +2493,41 @@ margin-left: -40px;
 
 
 
-![image-20210410194920209](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410194920209.png)
+![image-20210410194920209](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410194920209.png)
 
 当有元素压在其他元素的上方时，绝对定位很好用。
 
-![image-20210410194856699](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410194856699.png)
+![image-20210410194856699](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410194856699.png)
 
-![image-20210410195053040](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210410195053040.png)
+![image-20210410195053040](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210410195053040.png)
 
-![image-20210412093529799](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412093529799.png)
+![image-20210412093529799](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412093529799.png)
 
 当宽高相同时，设置border-radius为50%或者宽高的一半可以得到正圆。
 
-![image-20210412094710227](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412094710227.png)
+![image-20210412094710227](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412094710227.png)
 
-![image-20210412094726695](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412094726695.png)
+![image-20210412094726695](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412094726695.png)
 
-![image-20210412095050316](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412095050316.png)
+![image-20210412095050316](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412095050316.png)
 
-![image-20210412095129948](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412095129948.png)
+![image-20210412095129948](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412095129948.png)
 
-![image-20210412095343406](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412095343406.png)
+![image-20210412095343406](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412095343406.png)
 
-![image-20210412095923905](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412095923905.png)
+![image-20210412095923905](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412095923905.png)
 
 同时向4周延展
 
-![image-20210412100245107](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412100245107.png)
+![image-20210412100245107](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412100245107.png)
 
-![image-20210412100318323](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412100318323.png)
+![image-20210412100318323](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412100318323.png)
 
-![image-20210412100511868](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412100511868.png)
+![image-20210412100511868](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412100511868.png)
 
 用边框制作三角形
 
-![image-20210412103058413](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412103058413.png)
+![image-20210412103058413](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412103058413.png)
 
 将盒子的宽高设为0，其他边框设置为透明
 
@@ -2540,7 +2540,7 @@ margin-left: -40px;
 }
 ```
 
-![image-20210412111341819](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412111341819.png)
+![image-20210412111341819](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412111341819.png)
 
 | 值        | 意义               |
 | --------- | ------------------ |
@@ -2551,31 +2551,31 @@ margin-left: -40px;
 
 
 
-![image-20210412112022699](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412112022699.png)
+![image-20210412112022699](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412112022699.png)
 
 注意：这是用来设置背景图片的尺寸的，而不是设置背景尺寸
 
-![image-20210412112506763](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412112506763.png)
+![image-20210412112506763](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412112506763.png)
 
-![image-20210412120538266](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412120538266.png)
+![image-20210412120538266](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412120538266.png)
 
-![image-20210412121554589](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412121554589.png)
+![image-20210412121554589](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412121554589.png)
 
-![image-20210412122026775](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210412122026775.png)
+![image-20210412122026775](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210412122026775.png)
 
-![image-20210413201252361](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413201252361.png)
+![image-20210413201252361](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413201252361.png)
 
 /* 距离盒子左边100px 上边距20px*/
 
       background-position: 100px 20px;
 
-![image-20210413202242665](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413202242665.png)
+![image-20210413202242665](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413202242665.png)
 
 用PS切片工具选中想要的图标，然后双击可以可以显示位置和宽高。
 
-![image-20210413204514669](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413204514669.png)
+![image-20210413204514669](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413204514669.png)
 
-![image-20210413205319488](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413205319488.png)
+![image-20210413205319488](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413205319488.png)
 
 ```css
 .pic{
@@ -2589,15 +2589,15 @@ margin-left: -40px;
 
 注意background-position要设置为-x和-y
 
-![image-20210413213251345](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413213251345.png)
+![image-20210413213251345](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413213251345.png)
 
-![image-20210413213527110](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413213527110.png)
+![image-20210413213527110](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413213527110.png)
 
-![image-20210413213637273](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413213637273.png)
+![image-20210413213637273](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413213637273.png)
 
-![image-20210413213612993](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413213612993.png)
+![image-20210413213612993](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413213612993.png)
 
-![image-20210413214527297](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413214527297.png)
+![image-20210413214527297](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413214527297.png)
 
 ```css
 .box2{
@@ -2607,13 +2607,13 @@ margin-left: -40px;
 }
 ```
 
-![image-20210413214903802](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413214903802.png)
+![image-20210413214903802](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413214903802.png)
 
-![image-20210413222007678](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413222007678.png)
+![image-20210413222007678](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413222007678.png)
 
 默认情况，变形的原点在元素的中心点，或者是元素X轴和Y轴的50%处。
 
-![image-20210413223029940](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413223029940.png)
+![image-20210413223029940](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413223029940.png)
 
 transform-origin: 20% 40%; (把距离盒子左边20%，上边40%的点作为旋转点)
 
@@ -2621,45 +2621,45 @@ transform-origin: 0 0 ; 以左上角作为旋转中心
 
 
 
-![image-20210413223755796](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413223755796.png)
+![image-20210413223755796](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413223755796.png)
 
-![image-20210413224137454](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210413224137454.png)
+![image-20210413224137454](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210413224137454.png)
 
 注意单位是deg而不是px！
 
-![image-20210414100538234](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210414100538234.png)
+![image-20210414100538234](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210414100538234.png)
 
-![image-20210414101814959](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210414101814959.png)
+![image-20210414101814959](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210414101814959.png)
 
-![image-20210414102015136](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210414102015136.png)
+![image-20210414102015136](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210414102015136.png)
 
 给父标签设置perspective属性，旋转才会有透视，才能看到旋转。
 
 transform: rotateX(30deg) rotateY(50deg); 同时绕着x轴和y轴旋转。
 
-![image-20210414103153740](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210414103153740.png)
+![image-20210414103153740](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210414103153740.png)
 
-![image-20210414103223875](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210414103223875.png)
+![image-20210414103223875](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210414103223875.png)
 
 此时是沿着旋转后方向进行移动，而不是沿着原先的坐标轴。
 
-![1111软](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/1111%E8%BD%AF.gif)
+![1111软](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/1111%E8%BD%AF.gif)
 
 z轴本来是垂直于屏幕且正方向指向我的，盒子旋转后此时的Z轴为垂直于盒子的。因此transform: translateZ(100px); 会让盒子靠近沿着此时的Z轴移动100px，更加地靠近我，因此会觉得盒子变大了！。
 
-![1111软给](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/1111%E8%BD%AF%E7%BB%99.gif)
+![1111软给](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/1111%E8%BD%AF%E7%BB%99.gif)
 
-![image-20210414110507545](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210414110507545.png)
+![image-20210414110507545](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210414110507545.png)
 
-![image-20210414110612229](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210414110612229.png)
+![image-20210414110612229](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210414110612229.png)
 
 
 
-![image-20210415103901991](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415103901991.png)
+![image-20210415103901991](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415103901991.png)
 
-![image-20210415112633454](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415112633454.png)
+![image-20210415112633454](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415112633454.png)
 
-![image-20210415104451595](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415104451595.png)
+![image-20210415104451595](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415104451595.png)
 
 注意即使是0也要写单位。
 
@@ -2688,33 +2688,33 @@ z轴本来是垂直于屏幕且正方向指向我的，盒子旋转后此时的Z
 
 ```
 
-![image-20210415105023187](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415105023187.png)
+![image-20210415105023187](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415105023187.png)
 
 
 
 尽量把要变换的属性前后的值都写上。
 
-![image-20210415112139993](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415112139993.png)
+![image-20210415112139993](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415112139993.png)
 
 all不要滥用，会降低运行效率。
 
-![image-20210415112808926](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415112808926.png)
+![image-20210415112808926](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415112808926.png)
 
 https://cubic-bezier.com/可以生成贝塞尔曲线，可以自定义动画缓动参数。
 
-![image-20210415164801312](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415164801312.png)
+![image-20210415164801312](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415164801312.png)
 
-![image-20210415164927269](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415164927269.png)
+![image-20210415164927269](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415164927269.png)
 
-![image-20210415164951475](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415164951475.png)
+![image-20210415164951475](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415164951475.png)
 
-![image-20210415165053776](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415165053776.png)
+![image-20210415165053776](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415165053776.png)
 
-![image-20210415170343293](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415170343293.png)
+![image-20210415170343293](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415170343293.png)
 
 百分数表示运行时间。
 
-![image-20210415175222343](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415175222343.png)
+![image-20210415175222343](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415175222343.png)
 
 有点难度
 
@@ -2722,7 +2722,7 @@ https://cubic-bezier.com/可以生成贝塞尔曲线，可以自定义动画缓�
 
 百度搜索YUI reset 清除html标签的默认样式。如ul标签的小原点，h1的加粗。
 
-![image-20210415215639610](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210415215639610.png)
+![image-20210415215639610](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210415215639610.png)
 
 定义字体
 
@@ -2740,7 +2740,7 @@ Windows和Mac上常见的字体格式，是一种原始格式，因此它并没�
 
 文本框的outline
 
-![image-20210419214950750](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210419214950750.png)
+![image-20210419214950750](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210419214950750.png)
 
 后一项是前一项多乘以了一个数
 
@@ -2762,7 +2762,7 @@ for(var i=100;i<1000;i++){
 }
 ```
 
-![image-20210420152648683](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420152648683.png)
+![image-20210420152648683](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420152648683.png)
 
 ```javascript
 var a=[1,2,3,4,5];
@@ -2777,13 +2777,13 @@ var c="a-b-c-d-e-f";
 console.log(c.split("-")); // ["a", "b", "c", "d", "e", "f"];
 ```
 
-![image-20210420154010847](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420154010847.png)
+![image-20210420154010847](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420154010847.png)
 
-![image-20210420154039842](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420154039842.png)
+![image-20210420154039842](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420154039842.png)
 
-![image-20210420154436903](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420154436903.png)
+![image-20210420154436903](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420154436903.png)
 
-![image-20210420154309432](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420154309432.png)
+![image-20210420154309432](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420154309432.png)
 
 ```html
 ['a','b','c','d','b'].indexOf('b');//1
@@ -2791,9 +2791,9 @@ console.log(c.split("-")); // ["a", "b", "c", "d", "e", "f"];
 ['a','b','c','d','b'].includes('b');//true
 ```
 
-![image-20210420161208732](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420161208732.png)
+![image-20210420161208732](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420161208732.png)
 
-![image-20210420161411897](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420161411897.png)
+![image-20210420161411897](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420161411897.png)
 
 ```javascript
 var arr=[1,2,4,1,3,2,4,6,4];
@@ -2808,7 +2808,7 @@ for(var i=0;i<arr.length;i++){
 console.log(res);//[1, 2, 4, 3, 6]
 ```
 
-![image-20210420162319471](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420162319471.png)
+![image-20210420162319471](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420162319471.png)
 
 ```html
 var a=[15,43,67,25,47,63,89,34,48];
@@ -2826,13 +2826,13 @@ for(var i=0;i<3;i++){
 console.log(result); // [47, 25, 43]
 ```
 
-![image-20210420173210504](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420173210504.png)
+![image-20210420173210504](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420173210504.png)
 
-![image-20210420173323559](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420173323559.png)
+![image-20210420173323559](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420173323559.png)
 
-![image-20210420173344084](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420173344084.png)
+![image-20210420173344084](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420173344084.png)
 
-![image-20210420173403948](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420173403948.png)
+![image-20210420173403948](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420173403948.png)
 
 ```javascript
 // 冒泡排序
@@ -2854,7 +2854,7 @@ for(var i=1;i<arr.length;i++){
 console.log(arr);// [1, 2, 3, 6, 8, 9]
 ```
 
-![image-20210420194840049](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420194840049.png)
+![image-20210420194840049](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420194840049.png)
 
 ```javascript
 var matrix=[[11,33,55],[12,31,43,33],[12,43,53]];
@@ -2866,21 +2866,21 @@ for(var i=0;i<3;i++){
 }
 ```
 
-![image-20210420195616887](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420195616887.png)
+![image-20210420195616887](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420195616887.png)
 
-![image-20210420195519427](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420195519427.png)
+![image-20210420195519427](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420195519427.png)
 
-![image-20210420195819441](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420195819441.png)
+![image-20210420195819441](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420195819441.png)
 
-![image-20210420195922769](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420195922769.png)
+![image-20210420195922769](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420195922769.png)
 
-![image-20210420200006576](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420200006576.png)
+![image-20210420200006576](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420200006576.png)
 
-![image-20210420200117247](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420200117247.png)
+![image-20210420200117247](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420200117247.png)
 
-![image-20210420200206636](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420200206636.png)
+![image-20210420200206636](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420200206636.png)
 
-![image-20210420200333343](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20210420200333343.png)
+![image-20210420200333343](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20210420200333343.png)
 
 ```js
 var arr1=[1,2,3,4];

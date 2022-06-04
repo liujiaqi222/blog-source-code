@@ -120,7 +120,7 @@ app.get('/async2',(req,res)=>{
   
   最后的结果为：
   
-  ![image-20210801150053066](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210801150100.png)
+  ![image-20210801150053066](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210801150100.png)
 
 
 
@@ -194,7 +194,7 @@ app.delete('/axios',(req,res)=>{
 
 - 除了URLSearchParams，还可以通过其他方式编码，具体详见https://axios-http.com/zh/docs/urlencoded。
 
-  ![image-20210801153632594](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210801153639.png)
+  ![image-20210801153632594](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210801153639.png)
 
 ### PUT请求
 
@@ -327,7 +327,7 @@ app.all('*', function (req, res, next) {
 
 在请求发出前的设置的一些信息。
 
-![image-20210801163129933](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210801163129.png)
+![image-20210801163129933](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210801163129.png)
 
 ```js
 // 添加请求拦截器
@@ -362,7 +362,7 @@ axios.get('http://localhost/axios-json').then(function(response){
 
 在获取数据之前，对数据进行加工处理。
 
-![image-20210801163941747](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210801163941.png)
+![image-20210801163941747](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210801163941.png)
 
 ```js
 // 添加响应拦截器

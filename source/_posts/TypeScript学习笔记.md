@@ -30,7 +30,7 @@ TypeScript **是一个开源的、渐进式包含类型的 JavaScript 超集**�
 
 好消息是 TypeScript 提供了一个特殊的功能，允许我们在编译时对代码进行错误检测和类型 检测！要使用它的话，需要在计算机上全局安装 TypeScript。使用时，只需要在 JavaScript 文件 的第一行添加一句`// @ts-check`。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211204212613.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211204212613.png)
 
  TypeScript类型
 ===
@@ -105,7 +105,7 @@ let d = true; //d 之后只能是布尔值了
 
 ### 字面量类型
 
- ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211204222628.png)
+ ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211204222628.png)
 ```ts
 // 可以使用 | 来连接多个类型
 
@@ -140,11 +140,11 @@ e = 123;
 ### unknown 类型
 
 unknown是类型安全的any，unkonwn类型的变量，不能直接赋值给其他变量。
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211204225412.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211204225412.png)
 
 因为any类型的变量可以赋值给任意变量。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211204225149.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211204225149.png)
 
 ### 类型断言
 
@@ -152,7 +152,7 @@ unknown是类型安全的any，unkonwn类型的变量，不能直接赋值给其
 
 1. 先进行 `typeof` 类型判断后，再赋值。
 
-	 ![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211204225751.png)
+	 ![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211204225751.png)
 
 2. 给unknown 或者 any变量类型断言，告诉解析器变量的实际类型。
 
@@ -187,8 +187,8 @@ function fn():void {
 ```
 
 never 表示永远不会返回结果。
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211204233638.png)
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211204233843.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211204233638.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211204233843.png)
 
 ### object
 
@@ -213,7 +213,7 @@ j = {name:'jiaqi',age:12}
 
 如果指定了对象属性类型，则之后需要完全按照指定的要求来写。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211209154609.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211209154609.png)
 但如果在赋值的时候不想写age类型，可以在属性名后面加上`?`来表示属性是可选的。
 
 ```ts
@@ -367,7 +367,7 @@ interface 不能用于定义原始值的类型，是用于定义对象类型（�
 
 	可以同时定义多个  同名的`interface`，最终的结果就是把他们合在了一起。
 
-	![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220116224811.png)
+	![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220116224811.png)
 
 
 2. 箭头函数使用interface：
@@ -418,7 +418,7 @@ interface 不能用于定义原始值的类型，是用于定义对象类型（�
 
 可以用 `readobly`修饰某个属性，表示只读，不可以修改其值。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220115224542.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220115224542.png)
 
 
 ## 泛型
@@ -492,13 +492,13 @@ tsc xxx.ts -w
 
 使用 `tsc --init`  即可自动生成配置文件，而且带了compilerOptions的全部配置项和解释。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220115213620.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220115213620.png)
 
 使用 `tsc -w` 即会监视所有的文件！
 
 注意：一个要在添加 `tsconfig.json`文件后才能实现这个功能。
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/tsc1.gif)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/tsc1.gif)
 
 
 
@@ -576,11 +576,11 @@ console.log(getStuff(url));
 
 当把target设置为ES2018时，编译后的js如下：
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211217223746.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211217223746.png)
 
 而当把target设置为ES3时（或者说不设置target，因为默认值是ES3）：
 
-![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20211217223854.png)
+![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20211217223854.png)
 
 ### module
 
@@ -1226,7 +1226,7 @@ const jiaqi = new People('嘉琪', 0);
 
 ```
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220102135834.png"/>
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220102135834.png"/>
 
 此时，我们终于没有把 name 和 age 属性写死，新创建的对象是使用我们传进来的参数。
 
@@ -1249,14 +1249,14 @@ const jiaqi = new People('嘉琪', 0);
 jiaqi.eat();
 ```
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220102140923.png"/>
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220102140923.png"/>
 
 
 当然，如果是静态方法（类的方法）this肯定不是指向新创建的对象，而是指向类本身。（类方法只能类调用，所以指向类本身）
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220102141441.png"/>
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220102141441.png"/>
 
-![实例的对象是不能调用类方法](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220102141638.png)
+![实例的对象是不能调用类方法](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220102141638.png)
 
 使用ts：
 
@@ -1407,11 +1407,11 @@ class People extends Animal{
 	```
 - protected：该属性可以在当前类和它的子类中访问和修改
 
-	![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220116233547.png)
+	![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220116233547.png)
 
 - private：私有属性只能在当前类内部进行访问和修改，通过添加方法让私有属性能够间接地被访问：
 
-	![](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20220116231650.png)
+	![](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20220116231650.png)
 	```ts
 	class Person{
 	  name: string;

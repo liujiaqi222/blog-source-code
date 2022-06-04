@@ -61,7 +61,7 @@ vue 官方提供了两种快速创建工程化的 SPA 项目的方式：
 
 ② 基于 vue-cli 创建 SPA 项目  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051617916.png" alt="image-20210805161719813" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051617916.png" alt="image-20210805161719813" style="zoom:50%;" />
 
 # vite的基本使用
 
@@ -82,7 +82,7 @@ npm run dev
 
 使用vite创建的项目目录：
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051631447.png" alt="image-20210805163142399" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051631447.png" alt="image-20210805163142399" style="zoom:50%;" />
 
 其中：
 
@@ -100,7 +100,7 @@ npm run dev
 
 在 src 这个项目源代码目录之下，包含了如下的文件和文件夹：  
 
-![image-20210805163330821](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051633861.png)
+![image-20210805163330821](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051633861.png)
 
 其中：
 
@@ -199,7 +199,7 @@ spa_app.mount('#app');
 
 例如：http://www.ibootstrap.cn/ 所展示的效果，就契合了组件化开发的思想。用户可以通过拖拽组件的方式，快速生成一个页面的布局结构。  
 
-![image-20210805170030731](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051700807.png)
+![image-20210805170030731](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051700807.png)
 
 ## 2. 组件化开发的好处
 
@@ -230,7 +230,7 @@ vue 是一个完全支持组件化开发的框架。**vue 中规定组件的后�
 
 vue规定：每个组件对应的模板结构，需要定义到 `<template> `节点中。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051714617.png" alt="image-20210805171410574" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051714617.png" alt="image-20210805171410574" style="zoom:67%;" />
 
 注意：`<template>` 是 vue 提供的容器标签，只起到包裹性质的作用，它不会被渲染为真正的 DOM 元素。  
 
@@ -240,17 +240,17 @@ vue规定：每个组件对应的模板结构，需要定义到 `<template> `节
 
    代码示例如下：  
 
-   ![image-20210805171703762](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051717821.png)
+   ![image-20210805171703762](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051717821.png)
 
 2. 在template中定义根节点
 
    在 vue 2.x 的版本中，`<template>` 节点内的 DOM 结构仅支持单个根节点：
 
-   ![image-20210805171811774](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051718841.png)
+   ![image-20210805171811774](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051718841.png)
 
    但是，在 vue 3.x 的版本中，`<template>` 中支持定义多个根节点： 
 
-   ![image-20210805171853981](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051718042.png) 
+   ![image-20210805171853981](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051718042.png) 
 
 ## 3.组件中的script节点
 
@@ -284,7 +284,7 @@ export default {
 
 在使用 vue-devtools 进行项目调试的时候，自定义的组件名称可以清晰的区分每个组件：  
 
-![image-20210805172753292](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051727353.png)
+![image-20210805172753292](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051727353.png)
 
 3.2 script 中的 data 节点  
 
@@ -411,7 +411,7 @@ export default {
 
 组件之间可以进行相互的引用，例如：  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051811991.png" alt="image-20210805181154925" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051811991.png" alt="image-20210805181154925" style="zoom:50%;" />
 
 vue 中组件的**引用**原则：**先注册后使用**。  
 
@@ -423,7 +423,7 @@ vue 中注册组件的方式分为“全局注册”和“局部注册”两种�
 
 - 被局部注册的组件，只能在当前注册的范围内使用  
 
-![image-20210805181439691](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051814792.png)
+![image-20210805181439691](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051814792.png)
 
 ### 1.2 全局注册组件  
 
@@ -595,7 +595,7 @@ export default {
 
 在父组件中p标签文字变红了，子组件同样的p标签文字同样变红了。
 
-![image-20210805195116759](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108051951848.png)
+![image-20210805195116759](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108051951848.png)
 
 ### 2.1 思考：如何解决组件样式冲突的问题
 
@@ -777,7 +777,7 @@ export default {
 </script>
 ```
 
-![image-20210806115102272](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061151404.png)
+![image-20210806115102272](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061151404.png)
 
 ### 3.3 无法使用未声明的 props
 
@@ -803,7 +803,7 @@ export default {
 
 App.vue的代码同上个例子，故省略。最终渲染结果：
 
-![image-20210806115419523](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061154576.png)
+![image-20210806115419523](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061154576.png)
 
 ### 3.4 动态绑定 props 的值  
 
@@ -873,7 +873,7 @@ export default {
 
 在封装组件时对外界传递过来的 props 数据进行合法性的校验，从而防止数据不合法的问题。
 
-![image-20210806142210426](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061422528.png)
+![image-20210806142210426](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061422528.png)
 
 使用数组类型的 props 节点的缺点：无法为每个 prop 指定具体的数据类型。  
 
@@ -881,7 +881,7 @@ export default {
 
 使用对象类型的 props 节点，可以对每个 prop 进行数据类型的校验，示意图如下： 
 
-![image-20210806142342004](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061423096.png) 
+![image-20210806142342004](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061423096.png) 
 
 ```vue
 <template>
@@ -1079,7 +1079,7 @@ export default {
 </style>
 ```
 
-![image-20210806125040359](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061250434.png)
+![image-20210806125040359](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061250434.png)
 
 ### 5.3 以对象语法绑定 HTML 的 class
 
@@ -1215,7 +1215,7 @@ export default {
 
 在封装组件时，为了让**组件的使用者**可以**监听到组件内状态的变化**，此时需要用到组件的自定义事件  
 
-![image-20210806155958160](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061559242.png)
+![image-20210806155958160](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061559242.png)
 
 ### 2. 自定义事件的 3 个使用步骤
 
@@ -1358,7 +1358,7 @@ export default {
 
 v-model 是双向数据绑定指令，当需要**维护组件内外数据的同步**时，可以在组件上使用 v-model 指令。示意图如下：  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061645006.png" alt="image-20210806164507918" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061645006.png" alt="image-20210806164507918" style="zoom:80%;" />
 
 - 外界数据的变化会自动同步到 counter 组件中
 - counter 组件中数据的变化，也会自动同步到外界
@@ -1371,7 +1371,7 @@ v-model 是双向数据绑定指令，当需要**维护组件内外数据的同�
 
 ② 子组件中，通过 props 接收父组件传递过来的数据  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061647767.png" alt="image-20210806164753694" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061647767.png" alt="image-20210806164753694" style="zoom:67%;" />
 
 ```vue
 //父组件
@@ -1425,7 +1425,7 @@ export default {
 
 ③ 调用 $emit() 触发自定义事件，更新父组件中的数据  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061700899.png" alt="image-20210806170013827" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061700899.png" alt="image-20210806170013827" style="zoom:67%;" />
 
 ```vue
 // 父组件
@@ -1773,7 +1773,7 @@ export default {
 
 ### 1. 组件运行的过程
 
-![image-20210808162852517](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108081628645.png)
+![image-20210808162852517](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108081628645.png)
 
 组件的生命周期指的是：组件从创建 -> 运行（渲染） -> 销毁的整个过程，强调的是一个时间段。  
 
@@ -1884,17 +1884,17 @@ export default {
 </script>
 ```
 
-![动23](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108081704197.gif)
+![动23](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108081704197.gif)
 
 ### 4. 组件中主要的生命周期函数
 
-![image-20210808170708405](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108081707478.png)
+![image-20210808170708405](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108081707478.png)
 
 注意：在实际开发中，created 是最常用的生命周期函数！  
 
 ### 5. 组件中全部的生命周期函数
 
-![image-20210808170909186](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108081709280.png)
+![image-20210808170909186](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108081709280.png)
 
 ### 6. 完整的生命周期图示
 
@@ -2035,7 +2035,7 @@ export default {
 
 父组件在使用子组件期间，可以使用 v-model 指令维护组件内外数据的双向同步：  
 
-![image-20210808174949239](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108081749342.png)
+![image-20210808174949239](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108081749342.png)
 
 使用`v-model` 后，父组件便不需要监听子组件自定义的事件。
 
@@ -2098,7 +2098,7 @@ export default {
 
 兄弟组件之间实现数据共享的方案是 `EventBus`。可以借助于第三方的包 `mitt` 来创建 eventBus 对象，从而实现兄弟组件之间的数据共享。示意图如下：  
 
-![image-20210808175921307](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108081759439.png)
+![image-20210808175921307](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108081759439.png)
 
 
 
@@ -2193,7 +2193,7 @@ export default {
 
 后代关系组件之间共享数据，指的是**父节点的组件**向其**子孙组件**共享数据。此时组件之间的嵌套关系比较复杂，可以使用 `provide` 和 `inject` 实现后代关系组件之间的数据共享。  
 
-![image-20210808194300054](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108081943125.png)
+![image-20210808194300054](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108081943125.png)
 
 #### 4.1 父节点通过 provide 共享数据
 
@@ -2287,7 +2287,7 @@ export default {
 
 vuex 是终极的组件之间的数据共享方案。在企业级的 vue 项目开发中，vuex 可以让组件之间的数据共享变得高效、清晰、且易于维护。
 
- <img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108082021382.png" alt="image-20210808202145298" style="zoom:80%;" />
+ <img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108082021382.png" alt="image-20210808202145298" style="zoom:80%;" />
 
 ###  6. 总结
 
@@ -2318,7 +2318,7 @@ vuex 是终极的组件之间的数据共享方案。在企业级的 vue 项目�
 
 ① 每个组件中都需要导入 axios（代码臃肿）
 
-![image-20210808202541733](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108082025860.png)
+![image-20210808202541733](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108082025860.png)
 
 ② 每次发请求都需要填写完整的请求路径（不利于后期的维护）  
 
@@ -2326,7 +2326,7 @@ vuex 是终极的组件之间的数据共享方案。在企业级的 vue 项目�
 
 在 main.js 入口文件中，通过 `app.config.globalProperties` 全局挂载 axios，其中$http为自定义属性，示例代码如下：  
 
-![image-20210808202805130](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108082028265.png)
+![image-20210808202805130](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108082028265.png)
 
 ```js
 import { createApp } from 'vue'
@@ -2573,7 +2573,7 @@ export default {
 
 在home组件声明了一个计数的变量count=0，点击按钮count的时候，count值会增加。但是当切换到了moive组件，再切换回home组件后，会发现count的值恢复到0了。
 
-![组件](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108091826851.gif)
+![组件](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108091826851.gif)
 
 默认情况下，切换动态组件时无法保持组件的状态。此时可以使用 vue 内置的 `<keep-alive>` 组件保持动态组件的状态。组件切换后，并没有被销毁。
 
@@ -2583,7 +2583,7 @@ export default {
 </keep-alive>
 ```
 
-![组件没有被销毁](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108091829447.gif)
+![组件没有被销毁](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108091829447.gif)
 
 # 插槽
 
@@ -2591,7 +2591,7 @@ export default {
 
 插槽（Slot）是 vue 为组件的封装者提供的能力。允许开发者在封装组件时，把**不确定的、希望由用户指定的部分**定义为插槽。  
 
-![image-20210809183221206](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108091832326.png)
+![image-20210809183221206](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108091832326.png)
 
 可以把插槽认为是组件封装期间，为用户预留的**内容的占位符**。  
 

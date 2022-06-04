@@ -9,7 +9,7 @@ tags: [Vue, 小案例]
 
 案例效果
 
-![image-20210806172116797](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061721870.png)
+![image-20210806172116797](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061721870.png)
 
 用到的知识点
 
@@ -27,7 +27,7 @@ tags: [Vue, 小案例]
 
 ⑦ 组件上的 v-model  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108061950527.png" alt="image-20210806195021439" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108061950527.png" alt="image-20210806195021439" style="zoom:50%;" />
 
 ## 1.使用 vite 初始化项目
 
@@ -380,7 +380,7 @@ npm i less -D
 
 ### 4.3 通过自定义事件向外传递数据
 
-![image-20210806200940579](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108062009652.png)
+![image-20210806200940579](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108062009652.png)
 
 1. 在 TodoList 组件的 data 中声明如下的数据：
 

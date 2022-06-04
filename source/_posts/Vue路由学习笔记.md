@@ -15,7 +15,7 @@ tags: [Vue,Vue路由]
 - 概念：根据不同的用户URL请求，返回不同的内容
 - 本质：URL**请求地址**与**服务器资源**之问的对应关系
 
-![image-20210802121213464](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210802121213.png)
+![image-20210802121213464](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210802121213.png)
 
 ### SPA
 
@@ -30,7 +30,7 @@ tags: [Vue,Vue路由]
 - 概念：根据不同的**用户事件**，显示不同的页面内容。
 - 本质：**用户事件**与**事件处理函数**之间的对应关系。
 
-![image-20210802122059780](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210802122059.png)
+![image-20210802122059780](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210802122059.png)
 
 ### 前端路由的工作方式
 
@@ -59,7 +59,7 @@ window.onhashchange=function(){
 
 根据`location.hash`的值切换页面显示的内容
 
-![动1](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210802135422.gif)
+![动1](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210802135422.gif)
 
 ```html
 <div id="app">
@@ -276,7 +276,7 @@ vue-router 目前有 3.x 的版本和 4.x 的版本。其中：
    </html>
    ```
 
- ![动](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803112827.gif)
+ ![动](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803112827.gif)
 
 ## 路由重定向
 
@@ -306,7 +306,7 @@ const router = new VueRouter({
 - 模板内容中又有子级路由链接
 - 点击子级路由链接显示子级模板内容
 
-![image-20210803120119722](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803120119.png)
+![image-20210803120119722](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803120119.png)
 
 ### 具体实现
 
@@ -364,7 +364,7 @@ const router = new VueRouter({
 })
 ```
 
-![动2](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803123419.gif)
+![动2](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803123419.gif)
 
 全部代码见：http://jsrun.net/PU8Kp/edit
 
@@ -446,13 +446,13 @@ const User = {
 
    最终效果：
 
-   ![image-20210803134627526](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803134627.png)
+   ![image-20210803134627526](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803134627.png)
 
 3. `props`的值为函数类型
 
    形参route的值等于 `route.params`，即path中的动态参数。
 
-   ![image-20210803214818700](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803214818.png)
+   ![image-20210803214818700](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803214818.png)
 
    ```js
    const User = {
@@ -476,7 +476,7 @@ const User = {
    })
    ```
 
-![image-20210803214603161](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803214603.png)
+![image-20210803214603161](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803214603.png)
 
 ## 命名路由
 
@@ -607,7 +607,7 @@ http://jsrun.net/t98Kp/edit
 
 最终效果：
 
-![动23](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210804125047.gif)
+![动23](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210804125047.gif)
 
 实现的代码：(省略了css)
 
@@ -1028,7 +1028,7 @@ npm install vue-router@next
 
 ### 2 定义路由组件
 
-举个栗子：在项目中定义 MyHome.vue、MyMovie.vue、MyAbout.vue 三个组件，将来要使用 vue-router 来控制它们的展示与切换。![image-20210810153352360](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108101533469.png)
+举个栗子：在项目中定义 MyHome.vue、MyMovie.vue、MyAbout.vue 三个组件，将来要使用 vue-router 来控制它们的展示与切换。![image-20210810153352360](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108101533469.png)
 
 ### 3.  声明路由链接和占位符
 
@@ -1141,7 +1141,7 @@ const router=createRouter({
 
 被激活的路由链接，**默认**会自动应用一个叫做 `router-link-active` 的类名。开发者可以使用此类名选择器，为**激活的路由链接**设置高亮的样式：  
 
-![image-20210810162022542](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108101620610.png)
+![image-20210810162022542](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108101620610.png)
 
 ```css
 /*可以在index.css 为router-link-active设置样式*/
@@ -1176,7 +1176,7 @@ const router=createRouter({
 
 通过路由实现组件的嵌套展示，叫做嵌套路由。
 
-![image-20210810163106972](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108101631034.png)
+![image-20210810163106972](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108101631034.png)
 
 ① 声明子路由链接和子路由占位符
 
@@ -1320,13 +1320,13 @@ const User = {
 
 最终效果：
 
-![image-20210803134627526](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803134627.png)
+![image-20210803134627526](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803134627.png)
 
 #### `props`的值为函数类型
 
 形参route的值等于 `route.params`，即path中的动态参数。
 
-![image-20210803214818700](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803214818.png)
+![image-20210803214818700](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803214818.png)
 
 ```js
 const User = {
@@ -1350,7 +1350,7 @@ const router = new VueRouter({
 })
 ```
 
-![image-20210803214603161](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210803214603.png)
+![image-20210803214603161](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210803214603.png)
 
 
 
@@ -1477,7 +1477,7 @@ export default {
 
 **导航守卫**可以控制**路由的访问权限**。示意图如下：  
 
-![image-20210810192715528](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108101927665.png)
+![image-20210810192715528](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108101927665.png)
 
 ### 1.声明全局导航守卫
 
@@ -1515,7 +1515,7 @@ router.beforeEach((to,from,next)=>{
 
 打印to和from的结果：
 
-![image-20210810195445380](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108101954448.png)
+![image-20210810195445380](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108101954448.png)
 
 注意：
 ① 在守卫方法中**如果不声明 next 形参，则默认允许用户访问每一个路由**！
@@ -1526,7 +1526,7 @@ router.beforeEach((to,from,next)=>{
 
 参考示意图，分析 next 函数的 3 种调用方式最终导致的结果：
 
-![image-20210810201559508](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108102015581.png)
+![image-20210810201559508](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108102015581.png)
 
 - 直接放行：next();
 - **强制其停留在当前页面**：next(false);
@@ -1597,7 +1597,7 @@ const tokenStr=localStorage.getItem('token');
 
 首先用到了'meta'属性，然后在导航守卫中给将meta的值传给标题。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108311140471.png" alt="image-20210831114031423" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108311140471.png" alt="image-20210831114031423" style="zoom:50%;" />
 
 ```js
 import { createRouter, createWebHashHistory  } from 'vue-router';

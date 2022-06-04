@@ -6,11 +6,11 @@ tags: JavaScript
 
 # ES6简介
 
-![image-20210530104137712](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530104138.png)
+![image-20210530104137712](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530104138.png)
 
-![image-20210530104351721](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530104352.png)
+![image-20210530104351721](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530104352.png)
 
-![image-20210530104439339](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530104440.png)
+![image-20210530104439339](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530104440.png)
 
 # const
 
@@ -25,7 +25,7 @@ person[gender]="female";
 
 # let、const、var的区别
 
-![image-20210530131645190](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530131646.png)
+![image-20210530131645190](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530131646.png)
 
 1.重复声明：已经存在的变量，又声明了一次。
 
@@ -107,15 +107,15 @@ for(let i=0;i<btns.length;i++){
 
 1.使用var
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530144638.png" alt="2.let 和 const 的应用-var" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530144638.png" alt="2.let 和 const 的应用-var" style="zoom: 67%;" />
 
 2.使用闭包
 
-![3.let 和 const 的应用-闭包](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530144714.png)
+![3.let 和 const 的应用-闭包](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530144714.png)
 
 3.使用let
 
-![4.let 和 const 的应用-let](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530144732.png)
+![4.let 和 const 的应用-let](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530144732.png)
 
 # 模板字符串
 
@@ -143,7 +143,7 @@ const info=`name:${person.name}, age:${person.age}, gender:${person.gender}`;
 console.log(info);
 ```
 
-![image-20210530154645752](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210530154647.png)
+![image-20210530154645752](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210530154647.png)
 
 ```js
 //1.输出多行字符串
@@ -366,13 +366,13 @@ const timer={
 
 ## 数组解构赋值
 
-![image-20210603194723759](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210603194725.png)
+![image-20210603194723759](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210603194725.png)
 
-![image-20210603194752249](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210603194753.png)
+![image-20210603194752249](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210603194753.png)
 
-![image-20210603194903992](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210603194905.png)
+![image-20210603194903992](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210603194905.png)
 
-![image-20210603195036092](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210603195037.png)
+![image-20210603195036092](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210603195037.png)
 
 ### 1.解构赋值的定义
 
@@ -1162,7 +1162,7 @@ SeT/Map总结
 
 # Iterator
 
-![image-20210610180620847](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210610180623.png)
+![image-20210610180620847](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210610180623.png)
 
 ### 定义
 
@@ -1372,13 +1372,13 @@ console.log(a,b,c,d,e,f);
 
 ### Iterator总结
 
-![image-20210610222129343](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210610222130.png)
+![image-20210610222129343](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210610222130.png)
 
-![image-20210610222156497](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210610222157.png)
+![image-20210610222156497](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210610222157.png)
 
-![image-20210610222304196](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210610222305.png)
+![image-20210610222304196](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210610222305.png)
 
-![image-20210610220808524](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210610222325.png)
+![image-20210610220808524](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210610222325.png)
 
 
 
@@ -1704,17 +1704,17 @@ for (const [key,value] of Object.entries(person)){
 
 ## 新增方法总结
 
-![image-20210611160231073](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611160239.png)
+![image-20210611160231073](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611160239.png)
 
-![image-20210611160310273](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611160311.png)
+![image-20210611160310273](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611160311.png)
 
-![image-20210611160444694](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611160445.png)
+![image-20210611160444694](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611160445.png)
 
-![image-20210611160655803](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611160657.png)
+![image-20210611160655803](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611160657.png)
 
-![image-20210611160733628](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611160735.png)
+![image-20210611160733628](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611160735.png)
 
-![image-20210611160904401](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611160905.png)
+![image-20210611160904401](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611160905.png)
 
 
 
@@ -1726,7 +1726,7 @@ Promise 一般用来解决层层嵌套的回调函数(回调地狱callback hell)
 
 ### 基本用法
 
-![image-20210611181350553](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611181352.png)
+![image-20210611181350553](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611181352.png)
 
 ```js
 // 1.实例化构造函数生成实例对象
@@ -1759,9 +1759,9 @@ p.then((data) => {
 
 ### then()
 
-![image-20210611183459134](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611183500.png)
+![image-20210611183459134](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611183500.png)
 
-![image-20210611183554286](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210611183555.png)
+![image-20210611183554286](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210611183555.png)
 
 ```js
 // 1.then()什么时候执行
@@ -1997,7 +1997,7 @@ allSettedPromise.then((data)=>{
 
 ### 注意事项
 
-![image-20210612210200175](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210612210208.png)
+![image-20210612210200175](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210612210208.png)
 
 ```js
 // 1.resolve和reject函数执行后的代码
@@ -2110,33 +2110,33 @@ Promise应用异步加载图片
 
 ### 总结
 
-![image-20210613141548090](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613141556.png)
+![image-20210613141548090](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613141556.png)
 
-![image-20210613141645235](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613141646.png)
+![image-20210613141645235](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613141646.png)
 
-![image-20210613141717621](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613141718.png)
+![image-20210613141717621](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613141718.png)
 
-![image-20210613141849863](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613141850.png)
+![image-20210613141849863](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613141850.png)
 
-![image-20210613142007368](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613142008.png)
+![image-20210613142007368](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613142008.png)
 
-![image-20210613142050967](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613142051.png)
+![image-20210613142050967](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613142051.png)
 
-![image-20210613142135558](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613142136.png)
+![image-20210613142135558](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613142136.png)
 
-![image-20210613142150152](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613142151.png)
+![image-20210613142150152](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613142151.png)
 
-![image-20210613142216303](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613142217.png)
+![image-20210613142216303](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613142217.png)
 
-![image-20210613163042772](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613163043.png)
+![image-20210613163042772](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613163043.png)
 
-![image-20210613163153293](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613163154.png)
+![image-20210613163153293](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613163154.png)
 
-![image-20210613163219353](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613163220.png)
+![image-20210613163219353](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613163220.png)
 
-![image-20210613163245239](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613163246.png)
+![image-20210613163245239](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613163246.png)
 
-![image-20210613163303168](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210613163304.png)
+![image-20210613163303168](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210613163304.png)
 
 # class
 
@@ -2437,23 +2437,23 @@ console.log(age); // 可以正常输出
 
 ### 总结
 
-![image-20210615232937033](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615232944.png)
+![image-20210615232937033](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615232944.png)
 
-![image-20210615233123778](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233124.png)
+![image-20210615233123778](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233124.png)
 
-![image-20210615233157075](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233158.png)
+![image-20210615233157075](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233158.png)
 
-![image-20210615233228936](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233229.png)
+![image-20210615233228936](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233229.png)
 
-![image-20210615233313046](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233314.png)
+![image-20210615233313046](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233314.png)
 
-![image-20210615233403786](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233404.png)
+![image-20210615233403786](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233404.png)
 
-![image-20210615233451256](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233452.png)
+![image-20210615233451256](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233452.png)
 
-![image-20210615233557251](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233558.png)
+![image-20210615233557251](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233558.png)
 
-![image-20210615233651225](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210615233652.png)
+![image-20210615233651225](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210615233652.png)
 
 # node入门
 
@@ -2461,13 +2461,13 @@ console.log(age); // 可以正常输出
 
 在powershell中输入`code .`会用VS Code打开当前文件夹。
 
-![image-20210616170534238](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210616170542.png)
+![image-20210616170534238](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210616170542.png)
 
  首先进入到要执行js的文件夹，然后输入 node +要运行的程序名，即可运行js。
 
 在node中，没有window和document对象，但在node中有其他的对象可以操作文件、操作系统、网络等。
 
-![image-20210616171058446](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210616171059.png)
+![image-20210616171058446](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210616171059.png)
 
 在浏览器中中运行JavaScript，可以通过window.setTimeout()来调用setTimeout全局函数。在node中，则可以通过global.setTimeout()来调用，变量和函数不会添加到global对象中。
 
@@ -2481,7 +2481,7 @@ console.log(global.message); //undefined
 
 在node中任何文件都被视为模块(module)，在文件中定义的变量或函数的作用域限制在了该文件。如果需要使用这些私有变量或函数，需要明确地export它。
 
-![image-20210616172237280](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210616172238.png)
+![image-20210616172237280](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210616172238.png)
 
 任何node应用程序都至少有一个main 模块(文件)，我们称之为main module。
 
@@ -2515,7 +2515,7 @@ module.exports.url=url;
 
 最后，console.log(logger)会输出一个对象。
 
-![image-20210617112257229](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210617112306.png)
+![image-20210617112257229](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210617112306.png)
 
 如果只需要导出一个参数，导出时可以不自定义名字，这样require函数返回的不是导出模块的参数对象，而是返回的导出模块导出的变量名或常量名。
 
@@ -2560,7 +2560,7 @@ Babel本身可以编译ES6的大部分语法，比如let、 const、箭头函数
 
 一系列回车后，项目中会多了一个package.json的文件，执行`npm init`就是为了得到这个json文件。这个json文件会记录安装的其他的包。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210618121541.png" alt="image-20210618121540287" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210618121541.png" alt="image-20210618121540287" style="zoom:33%;" />
 
 ## 安装babel
 
@@ -3143,7 +3143,7 @@ module.exports = {
 
 第一步要先安装`core-js`。
 
-![image-20210620124715403](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210620124723.png)
+![image-20210620124715403](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210620124723.png)
 
 ```bash
 npm install --save-dev core-js
@@ -3212,7 +3212,7 @@ npm install --save-dev style-loader css-loader
 
 应保证 loader 的先后顺序：[`'style-loader'`](https://webpack.docschina.org/loaders/style-loader) 在前，而 [`'css-loader'`](https://webpack.docschina.org/loaders/css-loader) 在后。loader数组是从右到左执行，先通过'css-loader'识别css文件，再通过`style-loader`将css代码嵌入到style标签中。（在控制台可以看到）
 
-![image-20210620190450697](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210620190458.png)
+![image-20210620190450697](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210620190458.png)
 
 #### 插件+loader
 
@@ -3262,11 +3262,11 @@ npm install --save-dev css-loader mini-css-extract-plugin
 
 最后，可以在dist文件夹下看到生成的css文件。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210620194806.png" alt="image-20210620194803569" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210620194806.png" alt="image-20210620194803569" style="zoom:33%;" />
 
 而且在控制台可以看到样式是通过`link`标签引入的。
 
-![image-20210620194914627](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210620194915.png)
+![image-20210620194914627](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210620194915.png)
 
 ### 加载图片
 

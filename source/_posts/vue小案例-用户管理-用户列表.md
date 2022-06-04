@@ -709,7 +709,7 @@ new Vue({
 
 当`el-table`元素中注入`data`对象数组后，在`el-table-column`中用`prop`属性来对应对象中的键名即可填入数据，用`label`属性来定义表格的列名。可以使用`width`属性来定义列宽。
 
-![image-20210811192005052](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111920170.png)
+![image-20210811192005052](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111920170.png)
 
 ```vue
 <template>
@@ -726,11 +726,11 @@ new Vue({
 </template>
 ```
 
-![image-20210811193033787](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111930881.png)
+![image-20210811193033787](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111930881.png)
 
 接着为表格添加一些[样式](https://element.eleme.cn/#/zh-CN/component/table#dai-ban-ma-wen-biao-ge)，如添加stripe属性。默认情况下，Table 组件是不具有竖直方向的边框的，如果需要，可以使用`border`属性，它接受一个`Boolean`，设置为`true`即可启用。
 
-![image-20210811192753470](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111927544.png)
+![image-20210811192753470](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111927544.png)
 
 如果想要第一列渲染中id，可以使用`type="index"`。
 
@@ -811,7 +811,7 @@ function padZero(n){
 }
 ```
 
-![image-20210811210439793](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108112104982.png)
+![image-20210811210439793](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108112104982.png)
 
 当点击添加新用户的时候，希望弹出一个填充信息的对话框。在element-ui中，找到对应的对话框组件https://element.eleme.cn/#/zh-CN/component/dialog。
 
@@ -888,7 +888,7 @@ data() {
 </el-form>
 ```
 
-![image-20210811212639641](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108112126735.png)
+![image-20210811212639641](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108112126735.png)
 
 ### 2.8 实现表单验证
 
@@ -967,7 +967,7 @@ data() {
 
 在关闭表单后，希望重置表单的内容，并且重置校验的结果。以免第二次打开，还是上一次的结果。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108112208120.png" alt="image-20210811220826024" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108112208120.png" alt="image-20210811220826024" style="zoom:50%;" />
 
 element-ui的弹出框组件，有如下几种事件。可以通过监听关闭事件，来实现清空表单的功能。
 
@@ -1028,7 +1028,7 @@ methods: {
 
 当点击了确认按钮后，需要对表单的数据进行预校验，当表单验证通过后，再发送ajax请求。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108120933989.png" alt="image-20210812093321898" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108120933989.png" alt="image-20210812093321898" style="zoom:33%;" />
 
 ```vue
 <span slot="footer" class="dialog-footer">
@@ -1192,7 +1192,7 @@ onAddNewUser() {
 
 在UserList.vue中，当点击了删除后，应该弹出对话框提示用户是否删除。使用element ui的弹出框组件，https://element.eleme.cn/#/zh-CN/component/message-box#que-ren-xiao-xi。
 
-![image-20210812103806599](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108121038660.png)
+![image-20210812103806599](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108121038660.png)
 
 > 调用`$confirm`方法即可打开消息提示，它模拟了系统的 `confirm`。Message Box 组件也拥有极高的定制性，我们可以传入`options`作为第三个参数，它是一个字面量对象。`type`字段表明消息类型，可以为`success`，`error`，`info`和`warning`，无效的设置将会被忽略。注意，第二个参数`title`必须定义为`String`类型，如果是`Object`，会被理解为`options`。在这里我们用了 Promise 来处理后续响应。
 

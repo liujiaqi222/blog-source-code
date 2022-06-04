@@ -169,7 +169,7 @@ new Vue({
 </script>
 ```
 
-![image-20210727192913338](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210727192921.png)
+![image-20210727192913338](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210727192921.png)
 
 ### 属性
 
@@ -211,7 +211,7 @@ new Vue({
 </body>
 ```
 
-![image-20210727193358942](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210727193400.png)
+![image-20210727193358942](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210727193400.png)
 
 ### 表达式
 
@@ -516,7 +516,7 @@ new Vue({
 </script>
 ```
 
-![image-20210727232644828](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210727232652.png)
+![image-20210727232644828](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210727232652.png)
 
 ### v-for迭代对象
 
@@ -738,7 +738,7 @@ computed 属性默认只有 getter ，不过在需要时你也可以提供一个
 </script>
 ```
 
-![动1](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210728001253.gif)
+![动1](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210728001253.gif)
 
 以下实例进行**华氏度**与**摄氏度**之间的换算：
 
@@ -768,7 +768,7 @@ computed 属性默认只有 getter ，不过在需要时你也可以提供一个
 </script>
 ```
 
-![动2](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210728004031.gif)
+![动2](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210728004031.gif)
 
 # Vue.js 样式绑定
 
@@ -1095,7 +1095,7 @@ Vue 允许为 v-on 在监听键盘事件时添加按键修饰符：
 
 你可以用 v-model 指令在表单控件元素上创建双向数据绑定。
 
-![img](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210728105745.png)
+![img](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210728105745.png)
 
 ## 控件
 
@@ -1157,7 +1157,7 @@ new Vue({
 </script>
 ```
 
-![image-20210728114748599](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210728114757.png)
+![image-20210728114748599](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210728114757.png)
 
 可见，如果复选框只有一个，通过v-model绑定的checked的值为true或者false，而复选框有多个时，v-model绑定的checkedNames的值为input的value，且checkedNames是一个数组。
 
@@ -1185,7 +1185,7 @@ new Vue({
 </script>
 ```
 
-![image-20210728115636548](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210728115637.png)
+![image-20210728115636548](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210728115637.png)
 
 ## 修饰符
 
@@ -1224,7 +1224,7 @@ new Vue({
 
 组件系统让我们可以用独立可复用的小组件来构建大型应用，几乎任意类型的应用的界面都可以抽象为一个组件树：
 
-![img](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210728120331.png)
+![img](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210728120331.png)
 
 注册一个全局组件语法格式如下：
 
@@ -1731,7 +1731,7 @@ new Vue({
 </script>
 ```
 
-![image-20210730162439990](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/20210730162448.png)
+![image-20210730162439990](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/20210730162448.png)
 
 有时候我们不需要其他钩子函数，我们可以简写函数，如下格式：
 

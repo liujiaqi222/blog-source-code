@@ -52,7 +52,7 @@ vue ui
 
 步骤1：在终端下运行 vue ui 命令，自动在浏览器中打开创建项目的可视化面板：  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111236849.png" alt="image-20210811123643781" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111236849.png" alt="image-20210811123643781" style="zoom:50%;" />
 
 步骤2：在详情页面填写项目名称：  
 
@@ -60,19 +60,19 @@ vue ui
 
 步骤3：在预设页面选择手动配置项目：  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111331143.png" alt="image-20210811133142100" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111331143.png" alt="image-20210811133142100" style="zoom:50%;" />
 
 步骤4：在功能页面勾选需要安装的功能（Choose Vue Version、Babel、CSS 预处理器、**使用配置文件**）：  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111332107.png" alt="image-20210811133258059" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111332107.png" alt="image-20210811133258059" style="zoom:50%;" />
 
 步骤5：在配置页面勾选 vue 的版本和需要的预处理器：  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111333025.png" alt="image-20210811133339970" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111333025.png" alt="image-20210811133339970" style="zoom:50%;" />
 
 步骤6：将刚才所有的配置保存为预设（模板），方便下一次创建项目时直接复用之前的配置：  
 
-![image-20210811133451758](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111334801.png)
+![image-20210811133451758](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111334801.png)
 
 步骤7：创建项目并自动安装依赖包：  
 
@@ -80,27 +80,27 @@ vue ui 的本质：通过可视化的面板**采集**到用户的配置信息后
 
 项目创建完成后，自动进入项目仪表盘：  
 
-![image-20210811133810035](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111338126.png)
+![image-20210811133810035](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111338126.png)
 
 ## 5. 基于命令行创建 vue 项目
 
 步骤1：在终端下运行 vue create demo2 命令，基于交互式的命令行创建 vue 的项目：  通过上下箭头选择`manually select features`。
 
-![image-20210811135039039](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111350085.png)
+![image-20210811135039039](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111350085.png)
 
 步骤2：选择要安装的功能：  
 
-![image-20210811135314263](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111353298.png)
+![image-20210811135314263](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111353298.png)
 
 步骤3：使用上下箭头选择 vue 的版本，并使用回车键确认选择： 
 
-![image-20210811135404359](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111354393.png) 
+![image-20210811135404359](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111354393.png) 
 
 步骤4：使用上下箭头选择要使用的 css 预处理器，并使用回车键确认选择：  
 
 步骤5：使用上下箭头选择如何存储插件的配置信息，并使用回车键确认选择：  
 
-![image-20210811135441797](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111354834.png)
+![image-20210811135441797](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111354834.png)
 
 步骤6：是否将刚才的配置保存为预设：  
 
@@ -108,17 +108,17 @@ vue ui 的本质：通过可视化的面板**采集**到用户的配置信息后
 
 步骤8：开始创建项目并自动安装依赖包：  
 
-![image-20210811135535468](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111355504.png)
+![image-20210811135535468](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111355504.png)
 
 步骤9：项目创建完成：  
 
-![image-20210811135600817](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111356847.png)
+![image-20210811135600817](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111356847.png)
 
 ## 6. 梳理 vue2 项目的基本结构
 
 主要的文件：src -> App.vue，src -> main.js  
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111358164.png" alt="image-20210811135839127" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111358164.png" alt="image-20210811135839127" style="zoom:50%;" />
 
 ## 7. 分析 main.js 中的主要代码  
 
@@ -147,7 +147,7 @@ app.$mount('#app') // 3.2 把App根组件渲染到$mount 指定的el区域
 
 ### 8.1 回顾：4.x 版本的路由如何创建路由模块  
 
-![image-20210811141623444](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111416517.png)
+![image-20210811141623444](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111416517.png)
 
 ### 8.2 学习：3.x 版本的路由如何创建路由模块
 
@@ -159,7 +159,7 @@ npm install vue-router
 
 步骤2：在 src -> components 目录下，创建需要使用路由切换的组件：  
 
-![image-20210811142250768](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111422815.png)
+![image-20210811142250768](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111422815.png)
 
 步骤3：在 src 目录下创建 router -> index.js 路由模块：  
 
@@ -379,7 +379,7 @@ new Vue({
 
 拦截器（英文：Interceptors）会在每次发起 ajax 请求或得到响应的时候自动被触发。
 
-![image-20210811163040844](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111630897.png)
+![image-20210811163040844](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111630897.png)
 
 应用场景：
 
@@ -484,13 +484,13 @@ API 接口运行的地址：https://www.escook.cn/api/users
 
 由于当前的 API 接口没有开启 CORS 跨域资源共享，因此默认情况下，上面的接口无法请求成功！  
 
-![image-20210811170621432](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111706491.png)
+![image-20210811170621432](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111706491.png)
 
 ## 2. 通过代理解决接口的跨域问题
 
 通过 vue-cli 创建的项目在遇到接口跨域问题时，可以通过代理的方式来解决：
 
-![image-20210811170744136](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202108111707217.png)
+![image-20210811170744136](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202108111707217.png)
 
 ① 把 axios 的请求根路径设置**为 vue 项目的运行地址**（接口请求不再跨域）
 

@@ -54,7 +54,7 @@ app.listen(3000, () => {
 
 或者使用`res.json({name:'jiaqi'})`，这里因为我安装了json插件，所以数据样式被美化了一点。
 
-![image-20211116145100502](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161451529.png)
+![image-20211116145100502](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161451529.png)
 
 还可以给客户端发送返回文件，`res.download('img.png')`，因为我这里真的有一张图片，客户端访问该网址的时候，就可以下载文件。
 
@@ -62,15 +62,15 @@ app.listen(3000, () => {
 
 d. 如果想要给设置状态码，可以使用`res.sendStatus(500)`。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161448134.png" alt="image-20211116144817087" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161448134.png" alt="image-20211116144817087" style="zoom:50%;" />
 
 但如果设置状态码的同时，又想要发送内容可以使用`res.status(500).send('server error')`。
 
-<img src="https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161449693.png" alt="image-20211116144917649" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161449693.png" alt="image-20211116144917649" style="zoom:50%;" />
 
 或者也可以使用 `res.status(500).json(message:'error')`，就会发送json格式的数据。
 
-![image-20211116144644514](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161446563.png)
+![image-20211116144644514](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161446563.png)
 
 
 
@@ -105,15 +105,15 @@ app.listen(3000, () => {
 
 接着我们在根目录下创建一个view文件夹，用于存放需要被渲染的html文件夹。
 
-![image-20211116151018624](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161510667.png)
+![image-20211116151018624](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161510667.png)
 
 接着将html后缀改为ejs
 
-![image-20211116151103652](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161511685.png)
+![image-20211116151103652](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161511685.png)
 
 然后为了可以在ejs的文件有代码高亮和语法补全的功能，可以装一个ejs的插件。
 
-![image-20211116151218913](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161512947.png)
+![image-20211116151218913](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161512947.png)
 
 
 
@@ -125,7 +125,7 @@ app.get('/', (req, res) => {
 });
 ```
 
-![image-20211116151648927](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161516954.png)
+![image-20211116151648927](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161516954.png)
 
 ### 给html传递信息
 
@@ -139,29 +139,29 @@ app.get('/', (req, res) => {
 
 在ejs中 `<%%>`就相当于vue中的插槽`{{}}`，表示在这里使用js，`=` 表示在html中输出。
 
-![image-20211116152211682](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161522716.png)
+![image-20211116152211682](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161522716.png)
 
 因此上面的截图最终在浏览器显示的是：
 
-![image-20211116152704142](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161527164.png)
+![image-20211116152704142](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161527164.png)
 
 接下来，如果想要使用服务器给模板引擎传递的数据也是一样的。
 
-![image-20211116153935849](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161539880.png)
+![image-20211116153935849](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161539880.png)
 
 
 
-![image-20211116153928351](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161539375.png)
+![image-20211116153928351](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161539375.png)
 
 但如果说我们给模板传了太多变量，到最后都不记得传没有传。比如这里我们并没有给模板引擎传name333这个变量，最后浏览器端就报错了。
 
-![image-20211116154429299](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161544352.png)
+![image-20211116154429299](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161544352.png)
 
 为了这个问题，在ejs文件中我们在变量前面加一个locals。没有name333，那浏览器就不会显示，不会报错！
 
-`![image-20211116154715656](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161547685.png)
+`![image-20211116154715656](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161547685.png)
 
-![image-20211116154727153](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111161547173.png)
+![image-20211116154727153](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111161547173.png)
 
 ## 路由
 
@@ -200,7 +200,7 @@ app.listen(3000, () => {
 
 在根目录下创建一个routes的文件夹，并创建users.js文件。
 
-![image-20211116224541167](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111162245242.png)
+![image-20211116224541167](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111162245242.png)
 
 接着在user.js中，引入express，并使用它的`Router()`函数，然后将`app.get()`替换成`router.get()`。
 
@@ -265,7 +265,7 @@ app.listen(3000, () => {
 
 这时我们再打开对应的网址，还是会正常显示。
 
-![image-20211116225554512](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111162255556.png)
+![image-20211116225554512](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111162255556.png)
 
 ### 动态路由
 
@@ -302,7 +302,7 @@ module.exports = router;
 
 
 
-![image-20211116230707431](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111162307466.png)
+![image-20211116230707431](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111162307466.png)
 
 
 
@@ -337,7 +337,7 @@ router.get('/new', (req, res) => {
 module.exports = router;
 ```
 
-![image-20211116231139401](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111162311436.png)
+![image-20211116231139401](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111162311436.png)
 
 
 
@@ -417,7 +417,7 @@ module.exports = router;
 
 但是浏览器一直在转圈，表示在加载中，且页面也没有被刷新！
 
-![image-20211117000459777](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/202111170004832.png)
+![image-20211117000459777](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/202111170004832.png)
 
 这是因为我们没有调用next函数，执行下一步。因为`router.param()`本质上就是一种中间件，中间件就是**请求发送到服务器后，但服务器还没有将响应返回客户端。**
 
@@ -498,7 +498,7 @@ express 自带一些实用的中间件，比如渲染静态文件。
 
 比如在根目录下的`public`文件夹下，我们放了一些静态的HTML文件，HTML的内容我们不会去进行修改。
 
-![image-20220131132902752](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20220131132902752.png)
+![image-20220131132902752](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20220131132902752.png)
 
 ```js
 app.use(express.static('public'));
@@ -522,7 +522,7 @@ app.listen(3000, () => {
 });
 ```
 
-![image-20220131133027618](https://gitee.com/zyxbj/image-warehouse/raw/master/pics/image-20220131133027618.png)
+![image-20220131133027618](https://raw.githubusercontent.com/liujiaqi222/images/master/pics/image-20220131133027618.png)
 
 如果在 public 文件夹下创建一个新的文件夹 test，然后在 test 文件夹下创建一个 index.html，接着如果我们访问：`http://localhost:3000/test/`也可以打开该html文件。
 
